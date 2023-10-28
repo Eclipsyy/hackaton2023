@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -4268345517308621328}
   - component: {fileID: 6431047324341416026}
   - component: {fileID: 1458189775057524575}
-  - component: {fileID: 5781804258433763319}
   - component: {fileID: -7924379377078285554}
   m_Layer: 0
   m_Name: Player
@@ -166,22 +165,8 @@ MonoBehaviour:
   horizontalMovementScale: 2
   verticalMovementScale: 2
   jumpModifier: 2
---- !u!114 &5781804258433763319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8238594828912842948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4249235223d2cb54dbeb63ded2d033ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalMovementScale: 0
-  verticalMovementScale: 0
-  jumpModifier: 0
-  lifes: 0
+  dog: {fileID: 0}
+  animDog: {fileID: 0}
 --- !u!95 &-7924379377078285554
 Animator:
   serializedVersion: 5
