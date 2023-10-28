@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4852922612219917266
+--- !u!1 &3895173689787199216
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6797625861545909395}
-  - component: {fileID: 4081846910069601432}
+  - component: {fileID: 6683658472373050586}
+  - component: {fileID: 6316319054111630280}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: SaveSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6797625861545909395
+--- !u!4 &6683658472373050586
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4852922612219917266}
+  m_GameObject: {fileID: 3895173689787199216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4314214, y: -0.4544459, z: -9.9594}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4081846910069601432
+--- !u!114 &6316319054111630280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4852922612219917266}
+  m_GameObject: {fileID: 3895173689787199216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67178628f46b3fd4681c737d77356e2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 428a9bd7891dccd47b8c2e81c9baae52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lostHealth: {fileID: -243029100, guid: d10ac3a9eb59e47469539ff0896b3b0e, type: 3}
-  playerGO: {fileID: 8238594828912842948, guid: f18fdc33dc6a04249afa613de4a8d45a, type: 3}
-  ground: {fileID: 0}
-  lifes: 3
-  respUpDist: 1.5
-  respInitSpeed: 7
-  respDelay: 2
