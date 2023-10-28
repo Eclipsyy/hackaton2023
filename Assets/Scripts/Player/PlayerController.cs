@@ -34,12 +34,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        vert = Input.GetAxis("Vertical");
-        if (vert > 0)
-        {
-            JumpUp();
-            return;
-        }
         hor = Input.GetAxis("Horizontal");
         if (hor < 0)
         {
@@ -49,6 +43,12 @@ public class PlayerController : MonoBehaviour
         else if (hor > 0)
         {
             JumpRight();
+            return;
+        }
+        vert = Input.GetAxis("Vertical");
+        if (vert > 0)
+        {
+            JumpUp();
             return;
         }
     }
