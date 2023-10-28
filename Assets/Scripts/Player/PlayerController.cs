@@ -61,6 +61,12 @@ public class PlayerController : MonoBehaviour
                 return;
             }
         }
+        vert = Input.GetAxis("Vertical");
+        if (vert > 0)
+        {
+            JumpUp();
+            return;
+        }
     }
 
     //private void Update()
