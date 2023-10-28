@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
+        dog = GameObject.Find("Dog2Anchor");
+        animDog = dog.GetComponentInChildren<Animator>();
+        Shooter.instance.StartShooting();
     }
 
     public void JumpUp()
@@ -61,33 +64,24 @@ public class PlayerController : MonoBehaviour
                 return;
             }
         }
-        vert = Input.GetAxis("Vertical");
-        if (vert > 0)
-        {
-            JumpUp();
-            return;
-        }
     }
 
-    //private void Update()
-    //{
-    //    if (rb.velocity.x < 0)
-    //    {
-    //        Get
-    //    }
-    //}
+    public void Dead()
+    {
+        isDead = true;
+        //dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
+        animPlayer.SetTrigger("isDead");
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Scope")
-        {
-            isDead = true;
-            dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
-            animPlayer.SetTrigger("isDead");
-        }
         if (col.tag == "Ground")
         {
             dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
             animDog.SetTrigger("isCatch");
+            Shooter.instance.StopShooting();
+            GameManager.instance.Respawn();
+            Destroy(gameObject);
         }
     }
 }

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: {fileID: 0}
   playerTransform: {fileID: 0}
-  shootRate: 0.5
+  shootRate: 11
   aimRadius: 2
   shotgunShots: 4
   shotgunSpread: 3

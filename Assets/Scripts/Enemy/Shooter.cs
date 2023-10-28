@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    public static Shooter instance;
+
     public GameObject scope;
     public Transform playerTransform;
     Vector3 playerPosition;
@@ -21,12 +23,25 @@ public class Shooter : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         shootTimer = shootRate;
         weightSum = rifleWeight + shotgunWeight + laserWeight;
     }
 
+    public void StartShooting()
+    {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        StartCoroutine("ShootCor");
+    }
+
+    public void StopShooting()
+    {
+        StopCoroutine("ShootCor");
+    }
+
     private Vector3 Aim()
     {
+
         Vector2 bias2D = Random.insideUnitCircle * aimRadius;
         Vector3 ShootBias = new Vector3(bias2D.x, bias2D.y, 0);
         playerPosition = playerTransform.position;
@@ -35,21 +50,32 @@ public class Shooter : MonoBehaviour
         return AimPosition;
     }
 
-    private void Shoot()
+    public IEnumerator TestCor()
     {
-        float seed = Random.Range(0, weightSum);
-        if (seed < rifleWeight)
+        yield return null;
+        Debug.Log(Time.deltaTime);
+    }
+
+    public IEnumerator ShootCor()
+    {
+        while (true)
         {
-            ShootRifle();
+            yield return new WaitForSeconds(shootRate);
+            float seed = Random.Range(0, weightSum);
+            if (seed < rifleWeight)
+            {
+                ShootRifle();
+            }
+            else if (seed >= rifleWeight && seed < shotgunWeight + rifleWeight)
+            {
+                ShootShotgun();
+            }
+            else
+            {
+                ShootLaser();
+            }
         }
-        else if (seed >= rifleWeight && seed < shotgunWeight + rifleWeight)
-        {
-            ShootShotgun();
-        }
-        else
-        {
-            ShootLaser();
-        }
+        
     }
     private void ShootRifle()
     {
@@ -75,15 +101,5 @@ public class Shooter : MonoBehaviour
     private void ShootLaser()
     {
 
-    }
-
-    private void Update()
-    {
-        shootTimer -= Time.deltaTime;
-        if (shootTimer < 0 )
-        {
-            Shoot();
-            shootTimer = shootRate;
-        }
     }
 }
