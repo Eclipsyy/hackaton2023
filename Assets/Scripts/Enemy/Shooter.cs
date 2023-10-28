@@ -7,8 +7,6 @@ public class Shooter : MonoBehaviour
     public GameObject scope;
     public Transform playerTransform;
     Vector3 playerPosition;
-    //public float innerRadius;
-    //public float outerRadius;
     public float shootRate;
     float shootTimer;
     public float aimRadius;
@@ -25,21 +23,10 @@ public class Shooter : MonoBehaviour
     {
         shootTimer = shootRate;
         weightSum = rifleWeight + shotgunWeight + laserWeight;
-        //InvokeRepeating("Shoot", shootRate, shootRate);
     }
 
     private Vector3 Aim()
     {
-        //float outerX = (Random.value * outerRadius * 2) - outerRadius;
-        //float innerX = outerX * innerRadius / outerRadius;
-        //float outerY = (Random.value < 0.5) ? Mathf.Sqrt(outerRadius * outerRadius - outerX * outerX) : -1 * Mathf.Sqrt(outerRadius * outerRadius - outerX * outerX);
-        //float innerY = outerY * innerRadius / outerRadius;
-
-        //Vector3 OuterVector = new Vector3(outerX, outerY, 0);
-        //Vector3 InnerVector = new Vector3(innerX, innerY, 0);
-
-        //Vector3 InterpolatedVector = Vector3.Lerp(OuterVector, InnerVector, Random.value);
-
         Vector2 bias2D = Random.insideUnitCircle * aimRadius;
         Vector3 ShootBias = new Vector3(bias2D.x, bias2D.y, 0);
         playerPosition = playerTransform.position;

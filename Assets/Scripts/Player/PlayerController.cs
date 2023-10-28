@@ -32,23 +32,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontalMovementScale, verticalMovementScale);
     }
 
-
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.W))
-    //    {
-    //        JumpUp();
-    //    }
-    //    else if (Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        JumpLeft();
-    //    }
-    //    else if (Input.GetKeyDown(KeyCode.D))
-    //    {
-    //        JumpRight();
-    //    }
-    //}
-
     private void FixedUpdate()
     {
         vert = Input.GetAxis("Vertical");
@@ -69,4 +52,12 @@ public class PlayerController : MonoBehaviour
             return;
         }
     }
+
+    //private void Update()
+    //{
+    //    if (rb.velocity.x < 0)
+    //    {
+    //        Get
+    //    }
+    //}
 }
