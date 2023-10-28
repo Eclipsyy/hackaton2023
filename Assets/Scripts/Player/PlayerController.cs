@@ -80,10 +80,14 @@ public class PlayerController : MonoBehaviour
     {
         if (col.tag == "Scope")
         {
-           isDead = true;
-        dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
-        animPlayer.SetTrigger("isDead");
-        animDog.SetTrigger("isCatch"); 
+            isDead = true;
+            dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
+            animPlayer.SetTrigger("isDead");
+        }
+        if (col.tag == "Ground")
+        {
+            dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
+            animDog.SetTrigger("isCatch");
         }
     }
 }
