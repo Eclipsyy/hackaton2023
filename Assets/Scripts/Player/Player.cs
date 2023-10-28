@@ -10,4 +10,9 @@ public class Player : MonoBehaviour
     {
         player = GetComponent<GameObject>();
     }
+
+    void GetHit()
+    {
+
+    }
 }

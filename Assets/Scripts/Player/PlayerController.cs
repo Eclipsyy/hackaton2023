@@ -7,39 +7,26 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     public float horizontalMovementScale;
     public float verticalMovementScale;
+    public float jumpModifier;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public void JumpUp()
+    {
+        rb.velocity = Vector2.up * verticalMovementScale * jumpModifier;
+    }
+
     public void JumpLeft()
     {
-        JumpUp();
-        rb.velocity += Vector2.left * horizontalMovementScale;
+        rb.velocity = new Vector2(-horizontalMovementScale, verticalMovementScale);
     }
 
     public void JumpRight()
     {
-        JumpUp();
-        rb.velocity += Vector2.right * horizontalMovementScale;
-    }
-
-    public void JumpUp()
-    {
-        rb.velocity += Vector2.up * verticalMovementScale;
-    }
-
-    public void JumpLeftMod()
-    {
-        JumpUp();
-        rb.velocity = new Vector2(-horizontalMovementScale ,rb.velocity.y);
-    }
-
-    public void JumpRightMod()
-    {
-        JumpUp();
-        rb.velocity = new Vector2(horizontalMovementScale, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalMovementScale, verticalMovementScale);
     }
 
 
@@ -51,11 +38,11 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            JumpLeftMod();
+            JumpLeft();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            JumpRightMod();
+            JumpRight();
         }
     }
 }
