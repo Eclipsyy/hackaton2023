@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d86821fae983e849b43079ea547b273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scope: {fileID: 0}
+  Scope: {fileID: 3835214867631101846, guid: 4b2c33098e60872449435ea1be94bcbe, type: 3}
   playerTransform: {fileID: 0}
+  innerRadius: 1
+  outerRadius: 2
+  shootRate: 3

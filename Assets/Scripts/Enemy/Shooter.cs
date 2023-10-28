@@ -33,7 +33,7 @@ public class Shooter : MonoBehaviour
 
         GameObject createdScope = GameObject.Instantiate(Scope);
 
-        //createdScope.transform
+        createdScope.transform.position = ScopePosition;
     }
 
 }
