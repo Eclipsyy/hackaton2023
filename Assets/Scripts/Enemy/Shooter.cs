@@ -13,7 +13,6 @@ public class Shooter : MonoBehaviour
 
     private void Awake()
     {
-        playerPosition = playerTransform.position;
         InvokeRepeating("CreateScope", shootRate, shootRate);
     }
 
@@ -21,18 +20,18 @@ public class Shooter : MonoBehaviour
     {
         float outerX = (Random.value * outerRadius * 2) - outerRadius;
         float innerX = outerX * innerRadius / outerRadius;
-        float outerY = Mathf.Sqrt(outerRadius * outerRadius - outerX * outerX);
-        float innerY = Mathf.Sqrt(innerRadius * innerRadius - innerX * innerX);
+        float outerY = (Random.value < 0.5) ? Mathf.Sqrt(outerRadius * outerRadius - outerX * outerX) : -1*Mathf.Sqrt(outerRadius * outerRadius - outerX * outerX);
+        float innerY = outerY * innerRadius / outerRadius;
 
         Vector3 OuterVector = new Vector3(outerX, outerY, 0);
         Vector3 InnerVector = new Vector3(innerX, innerY, 0);
 
         Vector3 InterpolatedVector = Vector3.Lerp(OuterVector, InnerVector, Random.value);
 
+        playerPosition = playerTransform.position;
         Vector3 ScopePosition = playerPosition + InterpolatedVector;
 
         GameObject createdScope = GameObject.Instantiate(Scope);
-
         createdScope.transform.position = ScopePosition;
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scope : MonoBehaviour
 {
-    public int delay;
+    public float delay;
     private void Awake()
     {
         Invoke("Shoot", delay);

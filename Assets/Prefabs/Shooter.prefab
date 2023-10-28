@@ -47,5 +47,5 @@ MonoBehaviour:
   Scope: {fileID: 3835214867631101846, guid: 4b2c33098e60872449435ea1be94bcbe, type: 3}
   playerTransform: {fileID: 0}
   innerRadius: 1
-  outerRadius: 2
-  shootRate: 3
+  outerRadius: 1.5
+  shootRate: 0.5

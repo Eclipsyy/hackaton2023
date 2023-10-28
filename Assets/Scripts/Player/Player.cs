@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static GameObject player;
+    public int lifes;
 
     private void Awake()
     {
@@ -13,6 +14,10 @@ public class Player : MonoBehaviour
 
     void GetHit()
     {
-
+        lifes -= 1;
+        if ( lifes == 0)
+        {
+            GameManager.instance.GameOver();
+        }
     }
 }
