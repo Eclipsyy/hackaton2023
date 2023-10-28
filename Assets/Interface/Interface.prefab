@@ -255,7 +255,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3193738797423513179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: StartLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1295954793393134555
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159.80002, y: 0}
+  m_AnchoredPosition: {x: 144, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1618689178651891496
@@ -845,7 +857,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: text3
+  m_text: hunter's rage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0429a8dec24c085439ba06dece9cc1e3, type: 2}
   m_sharedMaterial: {fileID: 8471623242677268159, guid: 0429a8dec24c085439ba06dece9cc1e3, type: 2}
@@ -908,7 +920,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -22.744751, w: 0}
+  m_margin: {x: 0, y: 0, z: -314.578, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1374,8 +1386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159.8, y: -1.8}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 185.10999, y: -1.8}
+  m_SizeDelta: {x: 379.59, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &729363593665581905
 CanvasRenderer:
@@ -1405,7 +1417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: text1
+  m_text: one hunter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0429a8dec24c085439ba06dece9cc1e3, type: 2}
   m_sharedMaterial: {fileID: 8471623242677268159, guid: 0429a8dec24c085439ba06dece9cc1e3, type: 2}
@@ -1818,8 +1830,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159.8, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 206.80998, y: 0}
+  m_SizeDelta: {x: 474.37, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4499358002289132921
 CanvasRenderer:
@@ -1849,7 +1861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: text2
+  m_text: two hunters
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0429a8dec24c085439ba06dece9cc1e3, type: 2}
   m_sharedMaterial: {fileID: 8471623242677268159, guid: 0429a8dec24c085439ba06dece9cc1e3, type: 2}
