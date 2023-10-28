@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float verticalMovementScale;
     public float jumpModifier;
 
+    float vert;
+    float hor;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,19 +33,40 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        JumpUp();
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        JumpLeft();
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.D))
+    //    {
+    //        JumpRight();
+    //    }
+    //}
+
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        vert = Input.GetAxis("Vertical");
+        if (vert > 0)
         {
             JumpUp();
+            return;
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        hor = Input.GetAxis("Horizontal");
+        if (hor < 0)
         {
             JumpLeft();
+            return;
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (hor > 0)
         {
             JumpRight();
+            return;
         }
     }
 }

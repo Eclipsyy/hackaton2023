@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalMovementScale: 2
-  verticalMovementScale: 6
-  jumpModifier: 1.2
+  verticalMovementScale: 2
+  jumpModifier: 1.5
 --- !u!114 &5781804258433763319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,3 +177,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4249235223d2cb54dbeb63ded2d033ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifes: 0

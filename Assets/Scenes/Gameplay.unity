@@ -610,6 +610,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: scope
+      value: 
+      objectReference: {fileID: 3835214867631101846, guid: 4b2c33098e60872449435ea1be94bcbe, type: 3}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 5287295327223300363}
