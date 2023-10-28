@@ -9,12 +9,19 @@ public class PlayerController : MonoBehaviour
     public float verticalMovementScale;
     public float jumpModifier;
 
+    public GameObject dog;
+    public Animator animDog;
+    private Animator animPlayer;
+
+    private bool isDead = false;
+
     float vert;
     float hor;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animPlayer = GetComponent<Animator>();
     }
 
     public void JumpUp()
@@ -34,16 +41,25 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        hor = Input.GetAxis("Horizontal");
-        if (hor < 0)
+        if (!isDead)
         {
-            JumpLeft();
-            return;
-        }
-        else if (hor > 0)
-        {
-            JumpRight();
-            return;
+            vert = Input.GetAxis("Vertical");
+            if (vert > 0)
+            {
+                JumpUp();
+                return;
+            }
+            hor = Input.GetAxis("Horizontal");
+            if (hor < 0)
+            {
+                JumpLeft();
+                return;
+            }
+            else if (hor > 0)
+            {
+                JumpRight();
+                return;
+            }
         }
         vert = Input.GetAxis("Vertical");
         if (vert > 0)
@@ -60,4 +76,14 @@ public class PlayerController : MonoBehaviour
     //        Get
     //    }
     //}
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Scope")
+        {
+           isDead = true;
+        dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
+        animPlayer.SetTrigger("isDead");
+        animDog.SetTrigger("isCatch"); 
+        }
+    }
 }
