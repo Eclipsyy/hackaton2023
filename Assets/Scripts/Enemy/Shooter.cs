@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    public static Shooter instance;
+    //public static Shooter instance;
 
     public GameObject scope;
     public Transform playerTransform;
     Vector3 playerPosition;
     public float shootRate;
-    float shootTimer;
+    public float switchRate;
     public float aimRadius;
     public int shotgunShots;
     public float shotgunSpread;
@@ -22,12 +22,16 @@ public class Shooter : MonoBehaviour
     public float laserWeight;
     float weightSum;
 
+    public Weapon currentWeapon;
+
     public int countMiss = 0;
 
     public GameObject allHand;
-    public GameObject handPistol;
-    public GameObject handShotgun;
-    public GameObject handBazuka;
+    public GameObject[] hands;
+    public GameObject currentHand;
+    //public GameObject handPistol;
+    //public GameObject handShotgun;
+    //public GameObject handBazuka;
     private float targetX;
     public float speedHand;
     public Animator cloudCenzAnim;
@@ -38,9 +42,10 @@ public class Shooter : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
-        shootTimer = shootRate;
+        //instance = this;
         weightSum = rifleWeight + shotgunWeight + laserWeight;
+        SwitchToWeapon(Weapon.Pistol);
+        StartCoroutine(SwitchToShotgun());
     }
 
     private void Update()
@@ -85,26 +90,19 @@ public class Shooter : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(shootRate);
-            float seed = Random.Range(0, weightSum);
-            /*
-            if (seed < rifleWeight)
+            switch (currentWeapon)
             {
-                ShootRifle();
+                case Weapon.Pistol:
+                    ShootPistol();
+                    break;
+                case Weapon.Shotgun:
+                    ShootShotgun();
+                    break;
+                case Weapon.Bazooka:
+                    ShootBazuka();
+                    break;
             }
-            else if (seed >= rifleWeight && seed < shotgunWeight + rifleWeight)
-            {
-                ShootShotgun();
-            }
-            else
-            {
-                ShootLaser();
-            }
-            */
-            //ShootPistol();
-            //ShootShotgun();
-            ShootBazuka();
         }
-        
     }
 
     private void ShootPistol()
@@ -115,7 +113,7 @@ public class Shooter : MonoBehaviour
         createdScope.transform.position = ScopePosition;
         targetX = createdScope.transform.position.x;
 
-        Animator handAnim = handPistol.GetComponent<Animator>();
+        Animator handAnim = currentHand.GetComponent<Animator>();
         handAnim.SetTrigger("isShoot");
         pistolShootAudio.PlayOneShot(pistolShootAudio.clip);
         countMiss += 1;
@@ -131,7 +129,7 @@ public class Shooter : MonoBehaviour
         createdScope.transform.localScale = Vector3.one * bazukaScale;
         targetX = createdScope.transform.position.x;
 
-        Animator handAnim = handBazuka.GetComponent<Animator>();
+        Animator handAnim = currentHand.GetComponent<Animator>();
         handAnim.SetTrigger("isShoot");
         bazukaShootAudio.PlayOneShot(bazukaShootAudio.clip);
         countMiss += 1;
@@ -150,10 +148,34 @@ public class Shooter : MonoBehaviour
             targetX = shot.transform.position.x;
         }
 
-        Animator handAnim = handShotgun.GetComponent<Animator>();
+        Animator handAnim = currentHand.GetComponent<Animator>();
         handAnim.SetTrigger("isShoot");
         shotgunShootAudio.PlayOneShot(shotgunShootAudio.clip);
         countMiss += 1;
+    }
+
+    public void SwitchToWeapon(Weapon weapon)
+    {
+        if (currentHand != null)
+        {
+            currentHand.SetActive(false);
+        }
+        currentHand = hands[(int)weapon];
+        currentHand.SetActive(true);
+        currentWeapon = weapon;
+    }
+
+    public IEnumerator SwitchToShotgun()
+    {
+        yield return new WaitForSeconds(switchRate);
+        SwitchToWeapon(Weapon.Shotgun);
+        StartCoroutine(SwitchToBazooka());
+    }
+
+    public IEnumerator SwitchToBazooka()
+    {
+        yield return new WaitForSeconds(switchRate);
+        SwitchToWeapon(Weapon.Bazooka);
     }
 
     private void ShootLaser()
@@ -163,10 +185,13 @@ public class Shooter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //handPistol.transform.position = Vector3.Lerp(handPistol.transform.position, new Vector3(targetX, handPistol.transform.position.y, 0), Time.deltaTime * speedHand);
-        //handShotgun.transform.position = Vector3.Lerp(handShotgun.transform.position, new Vector3(targetX, handShotgun.transform.position.y, 0), Time.deltaTime * speedHand);
         allHand.transform.position = Vector3.Lerp(allHand.transform.position, new Vector3(targetX, allHand.transform.position.y, 0), Time.deltaTime * speedHand);
     }
+}
 
-
+public enum Weapon
+{
+    Pistol,
+    Shotgun,
+    Bazooka
 }

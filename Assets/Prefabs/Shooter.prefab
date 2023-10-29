@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6985166484212007634}
   m_Layer: 0
   m_Name: Shooter
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,8 +51,17 @@ MonoBehaviour:
   shotgunShots: 4
   shotgunSpread: 3
   shotgunScale: 0.5
+  bazukaScale: 4
   rifleWeight: 2
   shotgunWeight: 2
   laserWeight: 0
+  countMiss: 0
+  allHand: {fileID: 0}
   handPistol: {fileID: 0}
+  handShotgun: {fileID: 0}
+  handBazuka: {fileID: 0}
   speedHand: 3
+  cloudCenzAnim: {fileID: 0}
+  pistolShootAudio: {fileID: 0}
+  shotgunShootAudio: {fileID: 0}
+  bazukaShootAudio: {fileID: 0}

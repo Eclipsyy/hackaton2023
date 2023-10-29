@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer rend;
 
+    public GameObject[] shooters;
     public GameObject dog;
     public Animator animDog;
     private Animator animPlayer;
@@ -27,7 +28,12 @@ public class PlayerController : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         dog = GameObject.Find("Dog2Anchor");
         animDog = dog.GetComponentInChildren<Animator>();
-        Shooter.instance.StartShooting();
+        shooters = GameObject.FindGameObjectsWithTag("Shooter");
+        foreach (var shooter in shooters)
+        {
+            shooter.GetComponent<Shooter>().StartShooting();
+        }
+        //Shooter.instance.StartShooting();
     }
 
     public void JumpUp()
@@ -76,6 +82,7 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         //dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
         animPlayer.SetTrigger("isDead");
+        GetComponent<AudioSource>().Play();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -84,7 +91,11 @@ public class PlayerController : MonoBehaviour
         {
             dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
             animDog.SetTrigger("isCatch");
-            Shooter.instance.StopShooting();
+            foreach (var shooter in shooters)
+            {
+                shooter.GetComponent<Shooter>().StopShooting();
+            }
+            //Shooter.instance.StopShooting();
             GameManager.instance.Respawn();
             Destroy(gameObject);
         }
