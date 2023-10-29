@@ -93,6 +93,9 @@ public class Shooter : MonoBehaviour
         createdScope.transform.position = ScopePosition;
         targetX = createdScope.transform.position.x;
 
+        Animator handAnim = handPistol.GetComponent<Animator>();
+        handAnim.SetTrigger("isShoot");
+
     }
 
     private void ShootRifle()

@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float verticalMovementScale;
     public float jumpModifier;
 
+    private SpriteRenderer rend;
+
     public GameObject dog;
     public Animator animDog;
     private Animator animPlayer;
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rend = GetComponent<SpriteRenderer>();
         animPlayer = GetComponent<Animator>();
         dog = GameObject.Find("Dog2Anchor");
         animDog = dog.GetComponentInChildren<Animator>();
@@ -34,11 +37,13 @@ public class PlayerController : MonoBehaviour
 
     public void JumpLeft()
     {
+        rend.flipX = true;
         rb.velocity = new Vector2(-horizontalMovementScale, verticalMovementScale);
     }
 
     public void JumpRight()
     {
+        rend.flipX = false;
         rb.velocity = new Vector2(horizontalMovementScale, verticalMovementScale);
     }
 
