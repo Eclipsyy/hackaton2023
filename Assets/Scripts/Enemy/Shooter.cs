@@ -21,6 +21,10 @@ public class Shooter : MonoBehaviour
     public float laserWeight;
     float weightSum;
 
+    public GameObject handPistol;
+    private float targetX;
+    public float speedHand;
+
     private void Awake()
     {
         instance = this;
@@ -62,6 +66,7 @@ public class Shooter : MonoBehaviour
         {
             yield return new WaitForSeconds(shootRate);
             float seed = Random.Range(0, weightSum);
+            /*
             if (seed < rifleWeight)
             {
                 ShootRifle();
@@ -74,9 +79,22 @@ public class Shooter : MonoBehaviour
             {
                 ShootLaser();
             }
+            */
+            ShootPistol();
         }
         
     }
+
+    private void ShootPistol()
+    {
+        Vector3 ScopePosition = Aim();
+
+        GameObject createdScope = GameObject.Instantiate(scope);
+        createdScope.transform.position = ScopePosition;
+        targetX = createdScope.transform.position.x;
+
+    }
+
     private void ShootRifle()
     {
         Vector3 ScopePosition = Aim();
@@ -102,4 +120,11 @@ public class Shooter : MonoBehaviour
     {
 
     }
+
+    private void FixedUpdate()
+    {
+        handPistol.transform.position = Vector3.Lerp(handPistol.transform.position, new Vector3(targetX, handPistol.transform.position.y, 0), Time.deltaTime * speedHand);
+    }
+
+
 }

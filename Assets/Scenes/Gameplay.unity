@@ -610,17 +610,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
-      propertyPath: scope
+      propertyPath: handPistol
       value: 
-      objectReference: {fileID: 3835214867631101846, guid: 4b2c33098e60872449435ea1be94bcbe, type: 3}
-    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
-      propertyPath: shootRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 905521953}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -929,6 +921,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &905521953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8927221593008299065, guid: 52184ec629309544ca4c6aab3c1da8d1, type: 3}
+  m_PrefabInstance: {fileID: 5163610114739840646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &908283121
 GameObject:
   m_ObjectHideFlags: 0

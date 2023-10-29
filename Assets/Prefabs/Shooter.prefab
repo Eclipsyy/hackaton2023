@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d86821fae983e849b43079ea547b273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: {fileID: 0}
+  scope: {fileID: 3835214867631101846, guid: 4b2c33098e60872449435ea1be94bcbe, type: 3}
   playerTransform: {fileID: 0}
-  shootRate: 11
+  shootRate: 1
   aimRadius: 2
   shotgunShots: 4
   shotgunSpread: 3
@@ -54,3 +54,5 @@ MonoBehaviour:
   rifleWeight: 2
   shotgunWeight: 2
   laserWeight: 0
+  handPistol: {fileID: 0}
+  speedHand: 3
