@@ -15,6 +15,7 @@ public class Shooter : MonoBehaviour
     public int shotgunShots;
     public float shotgunSpread;
     public float shotgunScale;
+    public float bazukaScale;
 
     public float rifleWeight;
     public float shotgunWeight;
@@ -26,12 +27,14 @@ public class Shooter : MonoBehaviour
     public GameObject allHand;
     public GameObject handPistol;
     public GameObject handShotgun;
+    public GameObject handBazuka;
     private float targetX;
     public float speedHand;
     public Animator cloudCenzAnim;
 
     public AudioSource pistolShootAudio;
     public AudioSource shotgunShootAudio;
+    public AudioSource bazukaShootAudio;
 
     private void Awake()
     {
@@ -97,8 +100,9 @@ public class Shooter : MonoBehaviour
                 ShootLaser();
             }
             */
-            ShootPistol();
+            //ShootPistol();
             //ShootShotgun();
+            ShootBazuka();
         }
         
     }
@@ -118,12 +122,19 @@ public class Shooter : MonoBehaviour
 
     }
 
-    private void ShootRifle()
+    private void ShootBazuka()
     {
         Vector3 ScopePosition = Aim();
 
         GameObject createdScope = GameObject.Instantiate(scope);
         createdScope.transform.position = ScopePosition;
+        createdScope.transform.localScale = Vector3.one * bazukaScale;
+        targetX = createdScope.transform.position.x;
+
+        Animator handAnim = handBazuka.GetComponent<Animator>();
+        handAnim.SetTrigger("isShoot");
+        bazukaShootAudio.PlayOneShot(bazukaShootAudio.clip);
+        countMiss += 1;
     }
 
     private void ShootShotgun()
