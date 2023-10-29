@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BreakTV : MonoBehaviour
 {
+	public GameObject go;
 	public void Awake()
 	{
-		Invoke("Hit", 35);
+		Invoke("Hit", 40);
 	}
 
 	public void Hit(){
-		//gameobject.SetActive(true);
+		go.SetActive(true);
 	}
 }
