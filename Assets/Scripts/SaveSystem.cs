@@ -16,10 +16,14 @@ public class SaveSystem : MonoBehaviour
     private void Awake()
     {
         ss = GetComponent<SaveSystem>();
-        //gameManager = GameManager.gameManager;
+        LoadGame();
     }
     public void SaveGame()
     {
+        if (score > highScore)
+        {
+            highScore = score;
+        }
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath
           + "/MySaveData.dat");
@@ -32,8 +36,8 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadGame()
     {
-        if (File.Exists(Application.persistentDataPath
-          + "/MySaveData.dat"))
+
+        if (File.Exists(Application.persistentDataPath + "/MySaveData.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file =
@@ -42,10 +46,11 @@ public class SaveSystem : MonoBehaviour
             SaveData data = (SaveData)bf.Deserialize(file);
             file.Close();
             highScore = data.highScore;
-            Debug.LogError("Loaded");
+            //Debug.LogError("Loaded");
         }
         else
-            Debug.LogError("There is no save data!");
+            SaveGame();
+            //Debug.LogError("There is no save data!");
     }
 }
 

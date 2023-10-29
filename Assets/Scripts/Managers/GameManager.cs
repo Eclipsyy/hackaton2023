@@ -25,16 +25,19 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         StartCoroutine(RespawnCor());
-        StopCoroutine("ScoreCor");
+        StartCoroutine(ScoreCor());
     }
     public void GameOver()
     {
+        SaveSystem.ss.SaveGame();
+        SaveSystem.ss.score = 0;
+        StopCoroutine(ScoreCor());
         SceneManager.LoadScene(0);
     }
 
     public void Respawn()
     {
-        //StopCoroutine("ScoreCor");
+        //StopCoroutine(ScoreCor());
         lifes -= 1;
         Shooter.instance.countMiss = 0;
         healthBar[lifes].sprite = lostHealth;
@@ -52,7 +55,7 @@ public class GameManager : MonoBehaviour
         GameObject resp = Instantiate(playerGO);
         resp.transform.position = ground.transform.position + Vector3.up * respUpDist;
         resp.GetComponent<Rigidbody2D>().velocity = Vector3.up * respInitSpeed;
-        StartCoroutine(ScoreCor());
+        //StartCoroutine(ScoreCor());
     }
 
     public IEnumerator ScoreCor()
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(scoreDelay);
             SaveSystem.ss.score += scoreAddition;
-            scoreText.text = SaveSystem.ss.score.ToString();
+            scoreText.text = SaveSystem.ss.score.ToString("D6");
         }
     }
 }
