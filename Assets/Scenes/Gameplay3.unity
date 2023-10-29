@@ -2326,6 +2326,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4081846910069601432, guid: 8d24ac10175954f4e83b7293a472b3c7, type: 3}
+      propertyPath: gamemodeMultiplyer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081846910069601432, guid: 8d24ac10175954f4e83b7293a472b3c7, type: 3}
       propertyPath: healthBar.Array.data[0]
       value: 
       objectReference: {fileID: 1580556059}

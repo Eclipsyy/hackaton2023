@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public float scoreDelay;
     public int scoreAddition;
     public int countMiss;
+    public float gamemodeMultiplyer;
 
     public bool isGameOver = false;
     public GameObject canvGO;
@@ -81,7 +82,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(scoreDelay);
-            SaveSystem.ss.score += scoreAddition;
+            SaveSystem.ss.score += (int)(scoreAddition * gamemodeMultiplyer);
             scoreText.text = SaveSystem.ss.score.ToString("D6");
         }
     }

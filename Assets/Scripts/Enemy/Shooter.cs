@@ -177,6 +177,13 @@ public class Shooter : MonoBehaviour
 
     }
 
+    public IEnumerator SwitchToPistol()
+    {
+        yield return new WaitForSeconds(switchRate);
+        SwitchToWeapon(Weapon.Pistol);
+        StartCoroutine(SwitchToShotgun());
+    }
+
     public IEnumerator SwitchToShotgun()
     {
         yield return new WaitForSeconds(switchRate);
@@ -188,6 +195,7 @@ public class Shooter : MonoBehaviour
     {
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Bazooka);
+        StartCoroutine(SwitchToPistol());
     }
 
     private void ShootLaser()
