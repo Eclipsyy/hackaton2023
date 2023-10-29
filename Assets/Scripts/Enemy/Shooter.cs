@@ -23,10 +23,15 @@ public class Shooter : MonoBehaviour
 
     public int countMiss = 0;
 
+    public GameObject allHand;
     public GameObject handPistol;
+    public GameObject handShotgun;
     private float targetX;
     public float speedHand;
     public Animator cloudCenzAnim;
+
+    public AudioSource pistolShootAudio;
+    public AudioSource shotgunShootAudio;
 
     private void Awake()
     {
@@ -93,6 +98,7 @@ public class Shooter : MonoBehaviour
             }
             */
             ShootPistol();
+            //ShootShotgun();
         }
         
     }
@@ -107,6 +113,7 @@ public class Shooter : MonoBehaviour
 
         Animator handAnim = handPistol.GetComponent<Animator>();
         handAnim.SetTrigger("isShoot");
+        pistolShootAudio.PlayOneShot(pistolShootAudio.clip);
         countMiss += 1;
 
     }
@@ -129,7 +136,13 @@ public class Shooter : MonoBehaviour
             Vector2 bias = Random.insideUnitCircle * shotgunSpread;
             shot.transform.position = new Vector3(bias.x, bias.y, 0) + playerPosition;
             shot.transform.localScale = Vector3.one * shotgunScale;
+            targetX = shot.transform.position.x;
         }
+
+        Animator handAnim = handShotgun.GetComponent<Animator>();
+        handAnim.SetTrigger("isShoot");
+        shotgunShootAudio.PlayOneShot(shotgunShootAudio.clip);
+        countMiss += 1;
     }
 
     private void ShootLaser()
@@ -139,7 +152,9 @@ public class Shooter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        handPistol.transform.position = Vector3.Lerp(handPistol.transform.position, new Vector3(targetX, handPistol.transform.position.y, 0), Time.deltaTime * speedHand);
+        //handPistol.transform.position = Vector3.Lerp(handPistol.transform.position, new Vector3(targetX, handPistol.transform.position.y, 0), Time.deltaTime * speedHand);
+        //handShotgun.transform.position = Vector3.Lerp(handShotgun.transform.position, new Vector3(targetX, handShotgun.transform.position.y, 0), Time.deltaTime * speedHand);
+        allHand.transform.position = Vector3.Lerp(allHand.transform.position, new Vector3(targetX, allHand.transform.position.y, 0), Time.deltaTime * speedHand);
     }
 
 
