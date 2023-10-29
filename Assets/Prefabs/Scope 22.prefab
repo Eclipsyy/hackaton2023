@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4805936ac548c4a45bfa688316fc77b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefEff: {fileID: 8808121182023153483, guid: fe0c5880f74615f45998d7f1b83f39bb, type: 3}
   delay: 2
 --- !u!58 &-2568826290852354212
 CircleCollider2D:

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Scope : MonoBehaviour
 {
+    public GameObject prefEff;
     public float delay;
     bool inside;
     PlayerController playerContr;
@@ -19,6 +20,10 @@ public class Scope : MonoBehaviour
         {
             playerContr.Dead();
         }
+        GameObject shot = Instantiate(prefEff, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        //shot.GetComponent<Animator>().SetTrigger("isShoot");
+        Destroy(shot, 5f);
+
         Destroy(gameObject);
     }
 
