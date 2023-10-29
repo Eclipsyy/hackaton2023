@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour
     public float respDelay;
     public float scoreDelay;
     public int scoreAddition;
+    public int countMiss;
 
-    public AudioSource hitAudio;
+    //public AudioSource hitAudio;
 
     private void Awake()
     {
@@ -40,9 +41,9 @@ public class GameManager : MonoBehaviour
     public void Respawn()
     {
         //StopCoroutine(ScoreCor());
-        hitAudio.PlayOneShot(hitAudio.clip);
+        //hitAudio.PlayOneShot(hitAudio.clip);
         lifes -= 1;
-        Shooter.instance.countMiss = 0;
+        countMiss = 0;
         healthBar[lifes].sprite = lostHealth;
         if (lifes == 0)
         {

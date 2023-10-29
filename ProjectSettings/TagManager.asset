@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Scope
   - Ground
+  - Shooter
   layers:
   - Default
   - TransparentFX
