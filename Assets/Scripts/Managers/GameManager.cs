@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         //StopCoroutine("ScoreCor");
         lifes -= 1;
+        Shooter.instance.countMiss = 0;
         healthBar[lifes].sprite = lostHealth;
         if (lifes == 0)
         {

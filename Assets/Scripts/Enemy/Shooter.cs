@@ -21,15 +21,27 @@ public class Shooter : MonoBehaviour
     public float laserWeight;
     float weightSum;
 
+    public int countMiss = 0;
+
     public GameObject handPistol;
     private float targetX;
     public float speedHand;
+    public Animator cloudCenzAnim;
 
     private void Awake()
     {
         instance = this;
         shootTimer = shootRate;
         weightSum = rifleWeight + shotgunWeight + laserWeight;
+    }
+
+    private void Update()
+    {
+        if (countMiss == 7)
+        {
+            cloudCenzAnim.SetTrigger("isAppear");
+            countMiss = 0;
+        }
     }
 
     public void StartShooting()
@@ -95,6 +107,7 @@ public class Shooter : MonoBehaviour
 
         Animator handAnim = handPistol.GetComponent<Animator>();
         handAnim.SetTrigger("isShoot");
+        countMiss += 1;
 
     }
 

@@ -613,6 +613,10 @@ PrefabInstance:
       propertyPath: handPistol
       value: 
       objectReference: {fileID: 905521953}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: cloudCenzAnim
+      value: 
+      objectReference: {fileID: 423630170}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -702,6 +706,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 860105213}
   m_SourcePrefab: {fileID: 100100000, guid: 700f061eabfb7cb4b997aeaf556687d6, type: 3}
+--- !u!95 &423630170 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2287646988536017613, guid: 52184ec629309544ca4c6aab3c1da8d1, type: 3}
+  m_PrefabInstance: {fileID: 5163610114739840646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &521639589
 GameObject:
   m_ObjectHideFlags: 0
