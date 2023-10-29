@@ -7,6 +7,8 @@ public class Shooter : MonoBehaviour
     //public static Shooter instance;
 
     public GameObject scope;
+    public GameObject scopeShotgun;
+    public GameObject scopeBazooka;
     public Transform playerTransform;
     Vector3 playerPosition;
     public float shootRate;
@@ -39,6 +41,10 @@ public class Shooter : MonoBehaviour
     public AudioSource pistolShootAudio;
     public AudioSource shotgunShootAudio;
     public AudioSource bazukaShootAudio;
+
+    public Animator changeHand;
+
+    //public Sprite[] shotSprites;
 
     private void Awake()
     {
@@ -111,6 +117,7 @@ public class Shooter : MonoBehaviour
 
         GameObject createdScope = GameObject.Instantiate(scope);
         createdScope.transform.position = ScopePosition;
+        //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[0];
         targetX = createdScope.transform.position.x;
 
         Animator handAnim = currentHand.GetComponent<Animator>();
@@ -124,7 +131,8 @@ public class Shooter : MonoBehaviour
     {
         Vector3 ScopePosition = Aim();
 
-        GameObject createdScope = GameObject.Instantiate(scope);
+        GameObject createdScope = GameObject.Instantiate(scopeBazooka);
+        //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[2];
         createdScope.transform.position = ScopePosition;
         createdScope.transform.localScale = Vector3.one * bazukaScale;
         targetX = createdScope.transform.position.x;
@@ -141,7 +149,8 @@ public class Shooter : MonoBehaviour
 
         for (int i =0; i < shotgunShots; i++)
         {
-            GameObject shot = Instantiate(scope);
+            GameObject shot = Instantiate(scopeShotgun);
+            //shot.GetComponent<SpriteRenderer>().sprite = shotSprites[1];
             Vector2 bias = Random.insideUnitCircle * shotgunSpread;
             shot.transform.position = new Vector3(bias.x, bias.y, 0) + playerPosition;
             shot.transform.localScale = Vector3.one * shotgunScale;
@@ -160,9 +169,12 @@ public class Shooter : MonoBehaviour
         {
             currentHand.SetActive(false);
         }
+        changeHand.SetTrigger("isChange");
         currentHand = hands[(int)weapon];
         currentHand.SetActive(true);
         currentWeapon = weapon;
+
+
     }
 
     public IEnumerator SwitchToShotgun()

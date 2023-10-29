@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     public int scoreAddition;
     public int countMiss;
 
+    public bool isGameOver = false;
+    public GameObject canvGO;
+    public Animator noiseAnim;
+
     //public AudioSource hitAudio;
 
     private void Awake()
@@ -32,9 +36,19 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
+        isGameOver = true;
         SaveSystem.ss.SaveGame();
         SaveSystem.ss.score = 0;
         StopCoroutine(ScoreCor());
+        canvGO.SetActive(true);
+        noiseAnim.SetTrigger("isAppear");
+        StartCoroutine(GameOverCor());
+        //SceneManager.LoadScene(0);
+    }
+
+    public IEnumerator GameOverCor()
+    {
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(0);
     }
 

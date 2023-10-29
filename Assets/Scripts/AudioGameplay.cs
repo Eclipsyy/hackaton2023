@@ -13,6 +13,9 @@ public class AudioGameplay : MonoBehaviour
 
     public void Quack()
     {
-        QuackAudio.PlayOneShot(QuackAudio.clip);
+    	if (!GameManager.instance.isGameOver)
+    	{
+    		QuackAudio.PlayOneShot(QuackAudio.clip);
+    	}
     }
 }

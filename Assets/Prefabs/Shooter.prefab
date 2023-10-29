@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: {fileID: 3835214867631101846, guid: 4b2c33098e60872449435ea1be94bcbe, type: 3}
+  scopeShotgun: {fileID: 3835214867631101846, guid: 0b4bb83a726a1874abf4d25ac1c95e40, type: 3}
+  scopeBazooka: {fileID: 3835214867631101846, guid: ab4f440d85839ee49a38dbf9c5df5567, type: 3}
   playerTransform: {fileID: 0}
   shootRate: 1
+  switchRate: 20
   aimRadius: 2
   shotgunShots: 4
   shotgunSpread: 3
@@ -55,13 +58,17 @@ MonoBehaviour:
   rifleWeight: 2
   shotgunWeight: 2
   laserWeight: 0
+  currentWeapon: 0
   countMiss: 0
   allHand: {fileID: 0}
-  handPistol: {fileID: 0}
-  handShotgun: {fileID: 0}
-  handBazuka: {fileID: 0}
+  hands:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentHand: {fileID: 0}
   speedHand: 3
   cloudCenzAnim: {fileID: 0}
   pistolShootAudio: {fileID: 0}
   shotgunShootAudio: {fileID: 0}
   bazukaShootAudio: {fileID: 0}
+  changeHand: {fileID: 0}
