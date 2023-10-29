@@ -28,6 +28,8 @@ public class Shooter : MonoBehaviour
     public float speedHand;
     public Animator cloudCenzAnim;
 
+    public AudioSource pistolShootAudio;
+
     private void Awake()
     {
         instance = this;
@@ -107,6 +109,7 @@ public class Shooter : MonoBehaviour
 
         Animator handAnim = handPistol.GetComponent<Animator>();
         handAnim.SetTrigger("isShoot");
+        pistolShootAudio.PlayOneShot(pistolShootAudio.clip);
         countMiss += 1;
 
     }
