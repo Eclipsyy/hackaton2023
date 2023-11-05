@@ -2402,6 +2402,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 91395819}
+    - target: {fileID: 8776211263444841054, guid: caafd3343df438942801d8ab07d584cc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 190
+      objectReference: {fileID: 0}
     - target: {fileID: 8949597855684957414, guid: caafd3343df438942801d8ab07d584cc, type: 3}
       propertyPath: m_Name
       value: GameOver

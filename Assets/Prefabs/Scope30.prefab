@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefEff: {fileID: 3046307401053875173, guid: 9f1033a454abb794da3ceb9c8d4d1309, type: 3}
-  delay: 0.8
+  delay: 1
 --- !u!58 &3687904722735568211
 CircleCollider2D:
   m_ObjectHideFlags: 0

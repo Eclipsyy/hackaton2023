@@ -7,7 +7,7 @@ public class BreakTV : MonoBehaviour
 	public GameObject go;
 	public void Awake()
 	{
-		Invoke("Hit", 40);
+		Invoke("Hit", 30);
 	}
 
 	public void Hit(){
