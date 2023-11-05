@@ -131,10 +131,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 927517627295111906, guid: 4e23ed2ef4d7c584ba5eaed5166a23a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0025634766
+      objectReference: {fileID: 0}
     - target: {fileID: 2427372355763986480, guid: 4e23ed2ef4d7c584ba5eaed5166a23a0, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3871950406620906585, guid: 4e23ed2ef4d7c584ba5eaed5166a23a0, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7014149402953738465, guid: 4e23ed2ef4d7c584ba5eaed5166a23a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -565,7 +573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &786897376
 RectTransform:
   m_ObjectHideFlags: 0
