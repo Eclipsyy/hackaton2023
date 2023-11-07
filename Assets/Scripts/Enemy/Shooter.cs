@@ -31,9 +31,9 @@ public class Shooter : MonoBehaviour
     public GameObject allHand;
     public GameObject[] hands;
     public GameObject currentHand;
-    //public GameObject handPistol;
-    //public GameObject handShotgun;
-    //public GameObject handBazuka;
+    public GameObject handPistol;
+    public GameObject handShotgun;
+    public GameObject handBazuka;
     private float targetX;
     public float speedHand;
     public Animator cloudCenzAnim;
@@ -173,8 +173,6 @@ public class Shooter : MonoBehaviour
         currentHand = hands[(int)weapon];
         currentHand.SetActive(true);
         currentWeapon = weapon;
-
-
     }
 
     public IEnumerator SwitchToPistol()

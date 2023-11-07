@@ -169,6 +169,7 @@ MonoBehaviour:
   shooters: []
   dog: {fileID: 0}
   animDog: {fileID: 0}
+  offset: 1.5
 --- !u!95 &-7924379377078285554
 Animator:
   serializedVersion: 5

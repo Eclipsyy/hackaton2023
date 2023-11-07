@@ -8,6 +8,7 @@ public class Scope : MonoBehaviour
     public float delay;
     bool inside;
     PlayerController playerContr;
+
     private void Awake()
     {
         playerContr = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
@@ -21,7 +22,6 @@ public class Scope : MonoBehaviour
             playerContr.Dead();
         }
         GameObject shot = Instantiate(prefEff, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-        //shot.GetComponent<Animator>().SetTrigger("isShoot");
         Destroy(shot, 5f);
 
         Destroy(gameObject);

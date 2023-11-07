@@ -724,6 +724,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1975134699}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: handBazuka
+      value: 
+      objectReference: {fileID: 769300555}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: handPistol
+      value: 
+      objectReference: {fileID: 905521953}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: handShotgun
+      value: 
+      objectReference: {fileID: 706360377}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: cloudCenzAnim
       value: 
       objectReference: {fileID: 1075635851}
@@ -1807,38 +1819,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 911525246222903750, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2754781891917479909, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3558415504562413480, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 91395819}
-    - target: {fileID: 3558415504562413480, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_UpdateRectTransformForStandalone
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215418593624990334, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215418593624990334, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215418593624990334, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 131
-      objectReference: {fileID: 0}
-    - target: {fileID: 5437002967709502979, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.6
-      objectReference: {fileID: 0}
     - target: {fileID: 6457759580354025803, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1922,22 +1906,6 @@ PrefabInstance:
     - target: {fileID: 6672436525537641957, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
       propertyPath: m_Name
       value: GameplayInterface
-      objectReference: {fileID: 0}
-    - target: {fileID: 7002525858561508273, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8800382943925409724, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010631691110565347, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010631691110565347, guid: f4d449bf04e60054b948af53a239d5e6, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.62
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

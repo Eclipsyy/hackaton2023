@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
 
     private bool isDead = false;
 
+    private Vector2 mousePos;
+    private bool isMouseDown;
+    public float offset;
+
     float vert;
     float hor;
 
@@ -53,6 +57,21 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontalMovementScale, verticalMovementScale);
     }
 
+    private void Update()
+    {
+    	mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+    	if (Input.GetMouseButtonDown(0))
+        {
+            isMouseDown = true;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            isMouseDown = false;
+        }
+    	
+    }
+
     private void FixedUpdate()
     {
         if (!isDead)
@@ -74,6 +93,23 @@ public class PlayerController : MonoBehaviour
                 JumpRight();
                 return;
             }
+
+            if (isMouseDown)
+    	    {
+	    		//Instantiate(test, new Vector3(mousePos.x, mousePos.y, 0), Quaternion.identity);
+	    		if (mousePos.x > transform.position.x + offset)
+	    		{
+	    			JumpRight();
+	    		}
+	    		else if (mousePos.x < transform.position.x - offset)
+	    		{
+	    			JumpLeft();
+	    		}
+	    		else
+	    		{
+	    			JumpUp();
+	    		}
+    	    }
         }
     }
 
