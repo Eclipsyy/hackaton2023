@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 5993944189230745754}
   - component: {fileID: 6228543830273970243}
   - component: {fileID: 2505762577786197075}
+  - component: {fileID: 2400360468160696776}
   m_Layer: 0
   m_Name: TMP_Lifes
   m_TagString: Untagged
@@ -249,6 +250,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2400360468160696776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291311900838776494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8d9d38c39bd314f97678e11b7fc908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: LIFES
+  _ru: "\u0416\u0418\u0417\u041D\u0418"
+  _tr: 
 --- !u!1 &2157558328947399194
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +928,7 @@ GameObject:
   - component: {fileID: 7591719214987416542}
   - component: {fileID: 1000416451653749467}
   - component: {fileID: 7822670332156645524}
+  - component: {fileID: 114543422374423978}
   m_Layer: 0
   m_Name: TMP_Score
   m_TagString: Untagged
@@ -1035,6 +1052,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114543422374423978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7252303385938917023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8d9d38c39bd314f97678e11b7fc908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: SCORE
+  _ru: "\u0421\u0427\u0415\u0422"
+  _tr: 
 --- !u!1 &7641026491823691257
 GameObject:
   m_ObjectHideFlags: 0

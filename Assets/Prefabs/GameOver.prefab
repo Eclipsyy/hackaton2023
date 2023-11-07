@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6884079830342490619}
   - component: {fileID: 9192558077352191696}
   - component: {fileID: 8067991905162264288}
+  - component: {fileID: 3426247148387438557}
   m_Layer: 5
   m_Name: TMP_GO
   m_TagString: Untagged
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -290.30157, y: 0, z: -294.83752, w: -140.61488}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -156,6 +157,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3426247148387438557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893222067433710775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8d9d38c39bd314f97678e11b7fc908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _en: GAME OVER
+  _ru: "\u041A\u041E\u041D\u0415\u0426 \u0418\u0413\u0420\u042B"
+  _tr: 
 --- !u!1 &8949597855684957414
 GameObject:
   m_ObjectHideFlags: 0
