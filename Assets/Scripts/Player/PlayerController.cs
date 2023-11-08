@@ -22,11 +22,16 @@ public class PlayerController : MonoBehaviour
     private bool isMouseDown;
     public float offset;
 
+    public bool invulnerability;
+    public float timer = 0;
+    private GameObject eff;
+
     float vert;
     float hor;
 
     private void Awake()
     {
+        eff = gameObject.transform.Find("Eff").gameObject;
         rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         animPlayer = GetComponent<Animator>();
@@ -59,6 +64,19 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime; 
+            invulnerability = true;
+            eff.SetActive(true);
+        }
+        else
+        {
+            invulnerability = false;
+            timer = 0;
+            eff.SetActive(false);
+        }
+
     	mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     	if (Input.GetMouseButtonDown(0))
@@ -96,7 +114,6 @@ public class PlayerController : MonoBehaviour
 
             if (isMouseDown)
     	    {
-	    		//Instantiate(test, new Vector3(mousePos.x, mousePos.y, 0), Quaternion.identity);
 	    		if (mousePos.x > transform.position.x + offset)
 	    		{
 	    			JumpRight();
@@ -115,10 +132,13 @@ public class PlayerController : MonoBehaviour
 
     public void Dead()
     {
-        isDead = true;
-        //dog.transform.position = new Vector3(transform.position.x, dog.transform.position.y, 0);
-        animPlayer.SetTrigger("isDead");
-        GetComponent<AudioSource>().Play();
+        if (!invulnerability)
+        {
+            isDead = true;
+            animPlayer.SetTrigger("isDead");
+            GetComponent<AudioSource>().Play();
+        }
+       
     }
 
     void OnTriggerEnter2D(Collider2D col)

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public Image[] healthBar;
     public Sprite lostHealth;
+    public Sprite fullHealth;
     public GameObject playerGO;
     public GameObject ground;
     public TextMeshProUGUI scoreText;
@@ -61,6 +62,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void AddLife()
+    {
+        if (lifes < 5)
+        {
+           healthBar[lifes].sprite = fullHealth;
+           lifes += 1; 
+        }
+    }
+
     public void Respawn()
     {
         //StopCoroutine(ScoreCor());
@@ -74,6 +84,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         StartCoroutine(RespawnCor());
+        
     }
 
     public IEnumerator RespawnCor()

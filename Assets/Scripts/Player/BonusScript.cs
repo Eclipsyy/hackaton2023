@@ -6,6 +6,17 @@ public class BonusScript : MonoBehaviour
 {
 	public float speedRoate;
 	public int addScore;
+	public bool isInvulnerability;
+	public bool isLife;
+
+	private GameManager gameManager;
+	public AudioClip audio;
+	//private PlayerController playerContr;
+
+	void Awake()
+	{
+		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+	}
 
     void Update()
     {
@@ -16,6 +27,21 @@ public class BonusScript : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+        	GameObject.Find("AudioGameplay").GetComponent<AudioSource>().PlayOneShot(audio);
+
+        	gameManager.score += addScore;
+
+        	if (isLife)
+        	{
+        		gameManager.AddLife();
+        	}
+
+        	if (isInvulnerability)
+        	{
+        		PlayerController playerContr = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        		playerContr.timer = 7f;
+        	}
+
             Destroy(gameObject);
         }
     }
