@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: Game A
   _ru: "\u0418\u0433\u0440\u0430 A"
-  _tr: 
+  _tr: Oyun A
 --- !u!1 &205635272172758727
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: Game B
   _ru: "\u0418\u0433\u0440\u0430 B"
-  _tr: 
+  _tr: Oyun B
 --- !u!1 &1675618454942882945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: Game C
   _ru: "\u0418\u0433\u0440\u0430 C"
-  _tr: 
+  _tr: Oyun C
 --- !u!1 &2739988728446439170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: hunter's rage
   _ru: "\u044F\u0440\u043E\u0441\u0442\u044C \u043E\u0445\u043E\u0442\u043D\u0438\u043A\u0430"
-  _tr: 
+  _tr: "avc\u0131n\u0131n \xF6fkesi"
 --- !u!1 &3964728855422574312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: one hunter
   _ru: "\u043E\u0434\u0438\u043D \u043E\u0445\u043E\u0442\u043D\u0438\u043A"
-  _tr: 
+  _tr: "bir avc\u0131"
 --- !u!1 &4761316518165376882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _en: two hunters
   _ru: "\u0434\u0432\u0430 \u043E\u0445\u043E\u0442\u043D\u0438\u043A\u0430"
-  _tr: 
+  _tr: "iki avc\u0131"
 --- !u!1 &8582601305646532726
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float respDelay;
     public float scoreDelay;
     public int scoreAddition;
+    public int score = 0;
     public int countMiss;
     public float gamemodeMultiplyer;
 
@@ -38,8 +39,15 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
-        SaveSystem.ss.SaveGame();
-        SaveSystem.ss.score = 0;
+        //SaveSystem.ss.SaveGame();
+        //SaveSystem.ss.score = 0;
+        if (score > Progress.Instance.PlayerInfo.HighScore)
+        {
+            Progress.Instance.PlayerInfo.HighScore = score;
+            Progress.Instance.Save();
+            Progress.Instance.Leader("HighScore", score);
+        }
+        score = 0;
         StopCoroutine(ScoreCor());
         canvGO.SetActive(true);
         noiseAnim.SetTrigger("isAppear");
@@ -74,7 +82,7 @@ public class GameManager : MonoBehaviour
         GameObject resp = Instantiate(playerGO);
         resp.transform.position = ground.transform.position + Vector3.up * respUpDist;
         resp.GetComponent<Rigidbody2D>().velocity = Vector3.up * respInitSpeed;
-        //StartCoroutine(ScoreCor());
+        StartCoroutine(ScoreCor());
     }
 
     public IEnumerator ScoreCor()
@@ -82,8 +90,10 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(scoreDelay);
-            SaveSystem.ss.score += (int)(scoreAddition * gamemodeMultiplyer);
-            scoreText.text = SaveSystem.ss.score.ToString("D6");
+            //SaveSystem.ss.score += (int)(scoreAddition * gamemodeMultiplyer);
+            score += (int)(scoreAddition * gamemodeMultiplyer);
+            scoreText.text = score.ToString("D6"); //SaveSystem.ss.score.ToString("D6");
         }
     }
+
 }

@@ -8,6 +8,7 @@ using System.IO;
 
 public class SaveSystem : MonoBehaviour
 {
+    /*
     public int score;
     public int highScore;
     public static SaveSystem ss;
@@ -52,10 +53,13 @@ public class SaveSystem : MonoBehaviour
             SaveGame();
             //Debug.LogError("There is no save data!");
     }
+    */
 }
-
+/*
 [Serializable]
 class SaveData
 {
     public int highScore;
 }
+*/
+

@@ -7,8 +7,8 @@ public class Language : MonoBehaviour
 {
 	public static Language Instance;
 
-	//[DllImport("__Internal")]
-    //private static extern string GetLang();
+	[DllImport("__Internal")]
+    private static extern string GetLang();
 
 	public string CurrentLanguage;
 
@@ -19,8 +19,7 @@ public class Language : MonoBehaviour
     		Instance = this;
     		DontDestroyOnLoad(gameObject);
 
-    		//CurrentLanguage = GetLang();
-    		CurrentLanguage = "ru";
+    		CurrentLanguage = GetLang();
     	}
     	else
     	{
