@@ -9,6 +9,7 @@ public class Shooter : MonoBehaviour
     public GameObject scope;
     public GameObject scopeShotgun;
     public GameObject scopeBazooka;
+    public GameObject lazer;
     public Transform playerTransform;
     Vector3 playerPosition;
     public float shootRate;
@@ -31,9 +32,6 @@ public class Shooter : MonoBehaviour
     public GameObject allHand;
     public GameObject[] hands;
     public GameObject currentHand;
-    public GameObject handPistol;
-    public GameObject handShotgun;
-    public GameObject handBazuka;
     private float targetX;
     public float speedHand;
     public Animator cloudCenzAnim;
@@ -107,6 +105,9 @@ public class Shooter : MonoBehaviour
                 case Weapon.Bazooka:
                     ShootBazuka();
                     break;
+                case Weapon.Lazer:
+                    ShootLaser();
+                    break;
             }
         }
     }
@@ -163,6 +164,21 @@ public class Shooter : MonoBehaviour
         countMiss += 1;
     }
 
+    private void ShootLaser()
+    {
+        Vector3 ScopePosition = Aim();
+
+        GameObject createdScope = GameObject.Instantiate(lazer);
+        createdScope.transform.position = new Vector3(ScopePosition.x, 0);
+        //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[0];
+        targetX = createdScope.transform.position.x;
+
+        Animator handAnim = currentHand.GetComponent<Animator>();
+        handAnim.SetTrigger("isShoot");
+        pistolShootAudio.PlayOneShot(pistolShootAudio.clip);
+        countMiss += 1;
+    }
+
     public void SwitchToWeapon(Weapon weapon)
     {
         if (currentHand != null)
@@ -193,12 +209,15 @@ public class Shooter : MonoBehaviour
     {
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Bazooka);
-        StartCoroutine(SwitchToPistol());
+        StartCoroutine(SwitchToLazer());
+        //StartCoroutine(SwitchToPistol());
     }
 
-    private void ShootLaser()
+    public IEnumerator SwitchToLazer()
     {
-
+        yield return new WaitForSeconds(switchRate);
+        SwitchToWeapon(Weapon.Lazer);
+        StartCoroutine(SwitchToPistol());
     }
 
     private void FixedUpdate()
@@ -211,5 +230,6 @@ public enum Weapon
 {
     Pistol,
     Shotgun,
-    Bazooka
+    Bazooka,
+    Lazer
 }
