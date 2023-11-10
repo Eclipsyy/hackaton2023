@@ -19,6 +19,10 @@ public class HighScore : MonoBehaviour
         {
         	GetComponent<TextMeshProUGUI>().text = "EN YÜKSEK PUAN = " + Progress.Instance.PlayerInfo.HighScore.ToString("D6"); //+ SaveSystem.ss.highScore.ToString("D6");
         }
+        else if (Language.Instance.CurrentLanguage == "es")
+        {
+        	GetComponent<TextMeshProUGUI>().text = "PUNTUACIÓN MÁXIMA = " + Progress.Instance.PlayerInfo.HighScore.ToString("D6"); //+ SaveSystem.ss.highScore.ToString("D6");
+        }
         else
         {
         	GetComponent<TextMeshProUGUI>().text = "TOP SCORE = " + Progress.Instance.PlayerInfo.HighScore.ToString("D6"); //+ SaveSystem.ss.highScore.ToString("D6");

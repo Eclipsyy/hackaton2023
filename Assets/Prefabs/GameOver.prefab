@@ -172,6 +172,7 @@ MonoBehaviour:
   _en: GAME OVER
   _ru: "\u041A\u041E\u041D\u0415\u0426 \u0418\u0413\u0420\u042B"
   _tr: "OYUN B\u0130TT\u0130"
+  _es: FIN DEL JUEGO
 --- !u!1 &8949597855684957414
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ public class BonusScript : MonoBehaviour
 	public bool isLife;
 
 	private GameManager gameManager;
+	public Transform child;
 	public AudioClip audio;
-	//private PlayerController playerContr;
 
 	void Awake()
 	{
@@ -20,7 +20,14 @@ public class BonusScript : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(new Vector3(0, speedRoate, 0));
+        transform.Rotate(new Vector3(0, speedRoate * Time.deltaTime, 0));
+        //Transform child = transform.GetChild(0);
+        if (child != null)
+        {
+        	child.Rotate(new Vector3(0, -speedRoate * Time.deltaTime, 0));
+        }
+        //transform.RotateAround(transform.position, new Vector3(0, 1, 0), speedRoate * Time.deltaTime);
+        //transform.rotation *= Quaternion.Euler(0, speedRoate * Time.deltaTime, 0);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +36,15 @@ public class BonusScript : MonoBehaviour
         {
         	GameObject.Find("AudioGameplay").GetComponent<AudioSource>().PlayOneShot(audio);
 
-        	gameManager.score += addScore;
+        	if (gameManager.score + addScore >= 0)
+        	{
+        		gameManager.score += addScore;
+        	}
+        	else
+        	{
+        		gameManager.score = 0;
+        	}
+        	
 
         	if (isLife)
         	{

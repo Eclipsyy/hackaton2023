@@ -6,8 +6,9 @@ public class Scope : MonoBehaviour
 {
     public GameObject prefEff;
     public float delay;
-    bool inside;
-    PlayerController playerContr;
+    public float offset;
+    private bool inside;
+    private PlayerController playerContr;
 
     private void Awake()
     {
@@ -21,7 +22,7 @@ public class Scope : MonoBehaviour
         {
             playerContr.Dead();
         }
-        GameObject shot = Instantiate(prefEff, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        GameObject shot = Instantiate(prefEff, new Vector3(transform.position.x, transform.position.y + offset, 0), Quaternion.identity);
         Destroy(shot, 5f);
 
         Destroy(gameObject);

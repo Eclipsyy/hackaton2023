@@ -173,9 +173,9 @@ public class Shooter : MonoBehaviour
         //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[0];
         targetX = createdScope.transform.position.x;
 
-        Animator handAnim = currentHand.GetComponent<Animator>();
-        handAnim.SetTrigger("isShoot");
-        pistolShootAudio.PlayOneShot(pistolShootAudio.clip);
+        //Animator handAnim = currentHand.GetComponent<Animator>();
+        //handAnim.SetTrigger("isShoot");
+        //laserShootAudio.PlayOneShot(laserShootAudio.clip);
         countMiss += 1;
     }
 

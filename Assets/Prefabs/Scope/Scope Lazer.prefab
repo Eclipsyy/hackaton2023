@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.304905, y: -2.594129, z: 0}
-  m_LocalScale: {x: 3.575, y: 11.082936, z: 1}
+  m_LocalScale: {x: 1.1734937, y: 1.1734937, z: 0.32825}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1268243ffe8a865488c118b159e8c3f9, type: 3}
+  m_SortingLayerID: -1653023119
+  m_SortingLayer: 1
+  m_SortingOrder: 203
+  m_Sprite: {fileID: -512022953, guid: b78446e098e103441a5c35bec7d61413, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4805936ac548c4a45bfa688316fc77b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefEff: {fileID: 8808121182023153483, guid: fe0c5880f74615f45998d7f1b83f39bb, type: 3}
-  delay: 1.5
+  prefEff: {fileID: 6980275602053892611, guid: ec913fc3aacf3064bb975f3e34390565, type: 3}
+  delay: 1
+  offset: 1.2
 --- !u!61 &5358308466015204946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,16 +133,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0059386045, y: 0}
+  m_Offset: {x: 0.007820278, y: 0.67403686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.85, y: 0.86}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16959879, y: 0.63713694}
+  m_Size: {x: 0.44683892, y: 6.894968}
   m_EdgeRadius: 0

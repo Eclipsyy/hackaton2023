@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         GameObject resp = Instantiate(playerGO);
         resp.transform.position = ground.transform.position + Vector3.up * respUpDist;
         resp.GetComponent<Rigidbody2D>().velocity = Vector3.up * respInitSpeed;
-        StartCoroutine(ScoreCor());
+        //StartCoroutine(ScoreCor());
     }
 
     public IEnumerator ScoreCor()

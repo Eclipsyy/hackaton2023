@@ -9,6 +9,7 @@ public class InternationalText : MonoBehaviour
 	[SerializeField] string _en;
 	[SerializeField] string _ru;
 	[SerializeField] string _tr;
+    [SerializeField] string _es;
 
     void Start()
     {
@@ -23,6 +24,10 @@ public class InternationalText : MonoBehaviour
         else if (Language.Instance.CurrentLanguage == "tr")
         {
         	GetComponent<TextMeshProUGUI>().text = _tr;
+        }
+        else if (Language.Instance.CurrentLanguage == "es")
+        {
+            GetComponent<TextMeshProUGUI>().text = _es;
         }
         else
         {

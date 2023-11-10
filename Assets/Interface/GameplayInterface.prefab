@@ -265,6 +265,7 @@ MonoBehaviour:
   _en: LIFES
   _ru: "\u0416\u0418\u0417\u041D\u0418"
   _tr: HAYAT
+  _es: VIDAS
 --- !u!1 &2157558328947399194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1047,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 28.723549, w: -1.0377359}
+  m_margin: {x: -130.57599, y: 0, z: 28.723549, w: -1.0377359}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1067,6 +1068,7 @@ MonoBehaviour:
   _en: SCORE
   _ru: "\u0421\u0427\u0415\u0422"
   _tr: GOL
+  _es: PUNTAJE
 --- !u!1 &7641026491823691257
 GameObject:
   m_ObjectHideFlags: 0
