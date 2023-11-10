@@ -17,6 +17,7 @@ public class Progress : MonoBehaviour
 	public PlayerInfo PlayerInfo;
 	public static Progress Instance;
 	public bool WatchedStartAdv = false;
+	public GameObject[] awardAdvButton;
 
     [DllImport("__Internal")]
     private static extern void SaveExtern(string date);
@@ -97,8 +98,13 @@ public class Progress : MonoBehaviour
 
     public void ContinOnClosed()
     {
+    	Time.timeScale = 1f;
         AudioListener.pause = false;
-        Time.timeScale = 1f;
+        Button button = GameObject.FindWithTag("AwardButton").GetComponent<Button>();
+        if (button != null)
+        {
+        	button.interactable = true;
+        }
     }
 
     public void Leader(string name, int scor)
@@ -110,6 +116,12 @@ public class Progress : MonoBehaviour
     {
         Time.timeScale = 0f;
     	AudioListener.pause = true;
+    	Button button = GameObject.FindWithTag("AwardButton").GetComponent<Button>();
+    	if (button != null)
+        {
+        	button.interactable = false;
+        }
+        
         RewardedAdvExtern();
     }
 

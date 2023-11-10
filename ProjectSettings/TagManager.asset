@@ -7,6 +7,7 @@ TagManager:
   - Scope
   - Ground
   - Shooter
+  - AwardButton
   layers:
   - Default
   - TransparentFX

@@ -107,4 +107,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AwardAdv()
+    {
+        Progress.Instance.RewardedAdv();
+    } 
+
 }
