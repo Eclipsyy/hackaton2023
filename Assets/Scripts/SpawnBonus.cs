@@ -15,37 +15,52 @@ public class SpawnBonus : MonoBehaviour
 
     void Start()
     {
-    	InvokeRepeating("SpawnObject", timeToSpawn, timeToSpawn);
+    	//InvokeRepeating("SpawnObject", timeToSpawn, timeToSpawn);
     }
 
-    private void SpawnObject()
+    public void StartSpawn()
     {
-    	float totalProbability = 0f;
-        for (int i = 0; i < spawnProbabilities.Length; i++)
-        {
-            totalProbability += spawnProbabilities[i];
-        }
-        
-        for (int i = 0; i < spawnProbabilities.Length; i++)
-        {
-            spawnProbabilities[i] /= totalProbability;
-        }
+       StartCoroutine("SpawnBonusCor");
+    }
 
-        float randomValue = Random.Range(0f, 1f);
-        float randomX = Random.Range(spawnPoint1.position.x, spawnPoint2.position.x);
-        float randomY = Random.Range(spawnPoint1.position.y, spawnPoint2.position.y);
+    public void StopSpawn()
+    {
+       StopCoroutine("SpawnBonusCor");
+    }
 
-        float cumulativeProbability = 0f;
-        for (int i = 0; i < objectsToSpawn.Length; i++)
+    private IEnumerator SpawnBonusCor()
+    {
+    	while (true)
         {
-            cumulativeProbability += spawnProbabilities[i];
-            
-            if (randomValue <= cumulativeProbability)
-            {
-                GameObject spawnedObject = Instantiate(objectsToSpawn[i], new Vector3(randomX, randomY, 0), Quaternion.identity);
-                Destroy(spawnedObject, 3f);
-                break;
-            }
-        }
+            yield return new WaitForSeconds(timeToSpawn);
+
+	    	float totalProbability = 0f;
+	        for (int i = 0; i < spawnProbabilities.Length; i++)
+	        {
+	            totalProbability += spawnProbabilities[i];
+	        }
+	        
+	        for (int i = 0; i < spawnProbabilities.Length; i++)
+	        {
+	            spawnProbabilities[i] /= totalProbability;
+	        }
+
+	        float randomValue = Random.Range(0f, 1f);
+	        float randomX = Random.Range(spawnPoint1.position.x, spawnPoint2.position.x);
+	        float randomY = Random.Range(spawnPoint1.position.y, spawnPoint2.position.y);
+
+	        float cumulativeProbability = 0f;
+	        for (int i = 0; i < objectsToSpawn.Length; i++)
+	        {
+	            cumulativeProbability += spawnProbabilities[i];
+	            
+	            if (randomValue <= cumulativeProbability)
+	            {
+	                GameObject spawnedObject = Instantiate(objectsToSpawn[i], new Vector3(randomX, randomY, 0), Quaternion.identity);
+	                Destroy(spawnedObject, 3f);
+	                break;
+	            }
+	        }
+	    }
     }
 }

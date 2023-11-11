@@ -18,6 +18,7 @@ public class Progress : MonoBehaviour
 	public static Progress Instance;
 	public bool WatchedStartAdv = false;
 	public GameObject[] awardAdvButton;
+	public int lastScore = 0;
 
     [DllImport("__Internal")]
     private static extern void SaveExtern(string date);
@@ -62,20 +63,6 @@ public class Progress : MonoBehaviour
     {
 
     }
-
-
-/*
-    public void Save()
-    {
-        
-    }
-
-    public void Load()
-    {
-        
-    }
-*/
-
 
 
     public void Save()
@@ -127,6 +114,7 @@ public class Progress : MonoBehaviour
 
     public void GetReward()
     {
-        //награда после просмотра рекламы
+        GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gm.Revival();
     }
 }

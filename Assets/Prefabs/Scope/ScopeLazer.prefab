@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1428831035032858187}
   - component: {fileID: 5358308466015204946}
   m_Layer: 0
-  m_Name: Scope Lazer
+  m_Name: ScopeLazer
   m_TagString: Scope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007820278, y: 0.67403686}
+  m_Offset: {x: 0.00782077, y: 0.674037}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -144,5 +144,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44683892, y: 6.894968}
+  m_Size: {x: 0.36344168, y: 6.894968}
   m_EdgeRadius: 0

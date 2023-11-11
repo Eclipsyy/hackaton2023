@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer rend;
 
     public GameObject[] shooters;
+    private GameObject spawner;
     public GameObject dog;
     public Animator animDog;
     private Animator animPlayer;
@@ -37,12 +38,20 @@ public class PlayerController : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         dog = GameObject.Find("Dog2Anchor");
         animDog = dog.GetComponentInChildren<Animator>();
+
         shooters = GameObject.FindGameObjectsWithTag("Shooter");
+        spawner = GameObject.Find("Spawner");
+
+
         foreach (var shooter in shooters)
         {
-            shooter.GetComponent<Shooter>().StartShooting();
+            Shooter sh = shooter.GetComponent<Shooter>();
+            if (!sh.isBomb)
+            {
+                sh.StartShooting();
+            }
         }
-        //Shooter.instance.StartShooting();
+        spawner.GetComponent<SpawnBonus>().StartSpawn();
     }
 
     public void JumpUp()
@@ -135,7 +144,10 @@ public class PlayerController : MonoBehaviour
         if (!invulnerability)
         {
             isDead = true;
-            animPlayer.SetTrigger("isDead");
+            if (animPlayer != null)
+            {
+               animPlayer.SetTrigger("isDead"); 
+            }
             GetComponent<AudioSource>().Play();
         }
        
@@ -151,6 +163,7 @@ public class PlayerController : MonoBehaviour
             {
                 shooter.GetComponent<Shooter>().StopShooting();
             }
+            spawner.GetComponent<SpawnBonus>().StopSpawn();
             //Shooter.instance.StopShooting();
             GameManager.instance.Respawn();
             Destroy(gameObject);

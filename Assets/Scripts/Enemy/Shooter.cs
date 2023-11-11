@@ -10,6 +10,7 @@ public class Shooter : MonoBehaviour
     public GameObject scopeShotgun;
     public GameObject scopeBazooka;
     public GameObject lazer;
+    public GameObject bomb;
     public Transform playerTransform;
     Vector3 playerPosition;
     public float shootRate;
@@ -28,6 +29,7 @@ public class Shooter : MonoBehaviour
     public Weapon currentWeapon;
 
     public int countMiss = 0;
+    public bool isBomb;
 
     public GameObject allHand;
     public GameObject[] hands;
@@ -82,12 +84,13 @@ public class Shooter : MonoBehaviour
 
         return AimPosition;
     }
-
+/*
     public IEnumerator TestCor()
     {
         yield return null;
         Debug.Log(Time.deltaTime);
     }
+    */
 
     public IEnumerator ShootCor()
     {
@@ -108,6 +111,10 @@ public class Shooter : MonoBehaviour
                 case Weapon.Lazer:
                     ShootLaser();
                     break;
+                case Weapon.Bomb:
+                    ShootBomb();
+                    StopShooting();
+                    break;
             }
         }
     }
@@ -118,7 +125,6 @@ public class Shooter : MonoBehaviour
 
         GameObject createdScope = GameObject.Instantiate(scope);
         createdScope.transform.position = ScopePosition;
-        //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[0];
         targetX = createdScope.transform.position.x;
 
         Animator handAnim = currentHand.GetComponent<Animator>();
@@ -133,7 +139,6 @@ public class Shooter : MonoBehaviour
         Vector3 ScopePosition = Aim();
 
         GameObject createdScope = GameObject.Instantiate(scopeBazooka);
-        //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[2];
         createdScope.transform.position = ScopePosition;
         createdScope.transform.localScale = Vector3.one * bazukaScale;
         targetX = createdScope.transform.position.x;
@@ -151,7 +156,6 @@ public class Shooter : MonoBehaviour
         for (int i =0; i < shotgunShots; i++)
         {
             GameObject shot = Instantiate(scopeShotgun);
-            //shot.GetComponent<SpriteRenderer>().sprite = shotSprites[1];
             Vector2 bias = Random.insideUnitCircle * shotgunSpread;
             shot.transform.position = new Vector3(bias.x, bias.y, 0) + playerPosition;
             shot.transform.localScale = Vector3.one * shotgunScale;
@@ -169,14 +173,39 @@ public class Shooter : MonoBehaviour
         Vector3 ScopePosition = Aim();
 
         GameObject createdScope = GameObject.Instantiate(lazer);
-        createdScope.transform.position = new Vector3(ScopePosition.x, 0);
-        //createdScope.GetComponent<SpriteRenderer>().sprite = shotSprites[0];
+        createdScope.transform.position = new Vector3(ScopePosition.x, 0, 0);
         targetX = createdScope.transform.position.x;
 
         //Animator handAnim = currentHand.GetComponent<Animator>();
         //handAnim.SetTrigger("isShoot");
         //laserShootAudio.PlayOneShot(laserShootAudio.clip);
         countMiss += 1;
+    }
+
+    private void ShootBomb()
+    {
+        Vector3 ScopePosition = Aim();
+        isBomb = true;
+        GameObject createdScope = GameObject.Instantiate(bomb);
+        createdScope.transform.position = new Vector3(ScopePosition.x, 6, 0);
+        Scope scope = createdScope.GetComponent<Scope>();
+        Invoke("AfterBomb", scope.delay);
+
+        //Invoke("SwitchToPistol", scope.delay);
+        //targetX = createdScope.transform.position.x;
+
+        //Animator handAnim = currentHand.GetComponent<Animator>();
+        //handAnim.SetTrigger("isShoot");
+        //laserShootAudio.PlayOneShot(laserShootAudio.clip);
+        countMiss += 1;
+    }
+
+    public void AfterBomb()
+    {
+        isBomb = false;
+        StartShooting();
+        SwitchToWeapon(Weapon.Pistol);
+        StartCoroutine(SwitchToShotgun());
     }
 
     public void SwitchToWeapon(Weapon weapon)
@@ -217,7 +246,14 @@ public class Shooter : MonoBehaviour
     {
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Lazer);
-        StartCoroutine(SwitchToPistol());
+        StartCoroutine(SwitchToBomb());
+    }
+
+    public IEnumerator SwitchToBomb()
+    {
+        yield return new WaitForSeconds(switchRate);
+        SwitchToWeapon(Weapon.Bomb);
+        //StartCoroutine(SwitchToPistol());
     }
 
     private void FixedUpdate()
@@ -231,5 +267,6 @@ public enum Weapon
     Pistol,
     Shotgun,
     Bazooka,
-    Lazer
+    Lazer,
+    Bomb
 }

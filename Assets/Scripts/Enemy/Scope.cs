@@ -12,18 +12,20 @@ public class Scope : MonoBehaviour
 
     private void Awake()
     {
-        playerContr = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+       // playerContr = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         Invoke("Shoot", delay);
     }
 
     void Shoot()
     {
-        if (inside)
-        {
-            playerContr.Dead();
-        }
         GameObject shot = Instantiate(prefEff, new Vector3(transform.position.x, transform.position.y + offset, 0), Quaternion.identity);
         Destroy(shot, 5f);
+
+        if (inside)
+        {
+            PlayerController playerContr = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerContr.Dead();
+        }
 
         Destroy(gameObject);
     }

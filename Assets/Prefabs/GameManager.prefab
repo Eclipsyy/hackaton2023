@@ -51,9 +51,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   lostHealth: {fileID: -243029100, guid: d10ac3a9eb59e47469539ff0896b3b0e, type: 3}
+  fullHealth: {fileID: -647401283, guid: d10ac3a9eb59e47469539ff0896b3b0e, type: 3}
   playerGO: {fileID: 8238594828912842948, guid: f18fdc33dc6a04249afa613de4a8d45a, type: 3}
   ground: {fileID: 0}
-  lifes: 3
+  scoreText: {fileID: 0}
+  lifes: 5
   respUpDist: 1.5
   respInitSpeed: 7
   respDelay: 2
+  scoreDelay: 1
+  scoreAddition: 10
+  score: 0
+  countMiss: 0
+  gamemodeMultiplyer: 1
+  isGameOver: 0
+  canvGO: {fileID: 0}
+  noiseAnim: {fileID: 0}
+  fon: {fileID: 0}

@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public GameObject canvGO;
     public Animator noiseAnim;
 
+    public AudioSource fon;
+
     //public AudioSource hitAudio;
 
     private void Awake()
@@ -36,29 +38,36 @@ public class GameManager : MonoBehaviour
         instance = this;
         StartCoroutine(RespawnCor());
         StartCoroutine(ScoreCor());
+        score = Progress.Instance.lastScore;
     }
     public void GameOver()
     {
+        fon.pitch = 0.7f;
         isGameOver = true;
-        //SaveSystem.ss.SaveGame();
-        //SaveSystem.ss.score = 0;
+        StopCoroutine(ScoreCor());
         if (score > Progress.Instance.PlayerInfo.HighScore)
         {
             Progress.Instance.PlayerInfo.HighScore = score;
             Progress.Instance.Save();
             Progress.Instance.Leader("HighScore", score);
         }
-        score = 0;
-        StopCoroutine(ScoreCor());
         canvGO.SetActive(true);
         noiseAnim.SetTrigger("isAppear");
         StartCoroutine(GameOverCor());
-        //SceneManager.LoadScene(0);
+    }
+
+    public void Revival()
+    {
+        StopCoroutine(GameOverCor());
+        Progress.Instance.lastScore = score;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public IEnumerator GameOverCor()
     {
         yield return new WaitForSeconds(5);
+
+        Progress.Instance.lastScore = 0;
         SceneManager.LoadScene(0);
     }
 

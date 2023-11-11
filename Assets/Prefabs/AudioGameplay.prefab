@@ -128,7 +128,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &3823327072150736259
+--- !u!1 &4323424037397138297
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,22 +136,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 314099361756999694}
-  - component: {fileID: 6705023220568365295}
+  - component: {fileID: 7303438806974637901}
+  - component: {fileID: 1488338485108496601}
   m_Layer: 0
-  m_Name: FonMusic
+  m_Name: Fon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &314099361756999694
+--- !u!4 &7303438806974637901
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3823327072150736259}
+  m_GameObject: {fileID: 4323424037397138297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -160,13 +160,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2437412292298538727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6705023220568365295
+--- !u!82 &1488338485108496601
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3823327072150736259}
+  m_GameObject: {fileID: 4323424037397138297}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -420,7 +420,7 @@ Transform:
   - {fileID: 7742212725068148759}
   - {fileID: 3296245681152992617}
   - {fileID: 6136899648300681367}
-  - {fileID: 314099361756999694}
+  - {fileID: 7303438806974637901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2359606089699449513

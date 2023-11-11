@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a3ee1651cd3ece948868dd870bf3055b
+guid: fe86bbe382e7c68439cb099383848116
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shotgun_0
+      name: BaZyka_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 19
-        width: 113
-        height: 131
+        x: 0
+        y: 0
+        width: 273
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0eb9459599e4fd4cbb857a5d87f66ff
-      internalID: 1234910327
+      spriteID: dc32f9bde672806469c683731364b427
+      internalID: 1498802136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1
+      name: BaZyka_1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 17
-        width: 76
-        height: 150
+        x: 395
+        y: 0
+        width: 273
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2870860d7f61b0429287be592cea1b1
-      internalID: -1930708051
+      spriteID: aced400bc4d8fcc4dbfccc91db4f1ce5
+      internalID: 2115605938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_2
+      name: BaZyka_2
       rect:
         serializedVersion: 2
-        x: 248
-        y: 27
-        width: 77
-        height: 118
+        x: 808
+        y: 0
+        width: 283
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca3c78e3758505843959d8f61780c4d1
-      internalID: 1063322301
+      spriteID: c02d6fbc2d0d92b469338bd7cf2667cc
+      internalID: -1924903652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_3
+      name: BaZyka_3
       rect:
         serializedVersion: 2
-        x: 336
-        y: 34
-        width: 79
-        height: 60
+        x: 1145
+        y: 0
+        width: 385
+        height: 247
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c45acf571f179a438f8ec989c60a04f
-      internalID: -921411769
+      spriteID: 6630857b5fb07fa499bfe653b07b1c0b
+      internalID: 1111467077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaZyka_4
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 0
+        width: 389
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685fd727dc5894a43826eb947efc9711
+      internalID: 1997356339
       vertices: []
       indices: 
       edges: []
@@ -204,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shotgun_0: 1234910327
-      shotgun_1: -1930708051
-      shotgun_2: 1063322301
-      shotgun_3: -921411769
+      BaZyka_0: 1498802136
+      BaZyka_1: 2115605938
+      BaZyka_2: -1924903652
+      BaZyka_3: 1111467077
+      BaZyka_4: 1997356339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

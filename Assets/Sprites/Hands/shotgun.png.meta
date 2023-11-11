@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c39e684326d28ce42ab38069ba231b0f
+guid: a3ee1651cd3ece948868dd870bf3055b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ValinaHD_0
+      name: shotgun_0
       rect:
         serializedVersion: 2
-        x: 167
-        y: 546
-        width: 207
-        height: 277
+        x: 11
+        y: 19
+        width: 113
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ade55c889943a524d89860399621555e
-      internalID: -1127037069
+      spriteID: f0eb9459599e4fd4cbb857a5d87f66ff
+      internalID: 1234910327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ValinaHD_1
+      name: shotgun_1
       rect:
         serializedVersion: 2
-        x: 478
-        y: 557
-        width: 214
-        height: 266
+        x: 152
+        y: 17
+        width: 76
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0688af9c20a4113488f6a2a8c3c2f1be
-      internalID: 429253238
+      spriteID: f2870860d7f61b0429287be592cea1b1
+      internalID: -1930708051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ValinaHD_2
+      name: shotgun_2
       rect:
         serializedVersion: 2
-        x: 812
-        y: 557
-        width: 214
-        height: 392
+        x: 248
+        y: 27
+        width: 77
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,62 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 682a60818501998469ca9e9539a88c34
-      internalID: 671355899
+      spriteID: ca3c78e3758505843959d8f61780c4d1
+      internalID: 1063322301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ValinaHD_3
+      name: shotgun_3
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 557
-        width: 194
-        height: 397
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e8c9b451e23fac4abcc9e06055de960
-      internalID: -717189519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ValinaHD_4
-      rect:
-        serializedVersion: 2
-        x: 1431
-        y: 470
-        width: 347
-        height: 587
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6b4e10d7345c73468191c2ef8cc3b57
-      internalID: -1367792070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ValinaHD_5
-      rect:
-        serializedVersion: 2
-        x: 199
+        x: 336
         y: 34
-        width: 208
-        height: 277
+        width: 79
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,50 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8422360854a7815488e20a4b8105fd24
-      internalID: 2144680341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ValinaHD_6
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 30
-        width: 206
-        height: 326
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0feeda52638427045a750ffeeb475247
-      internalID: -61807407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ValinaHD_7
-      rect:
-        serializedVersion: 2
-        x: 785
-        y: 33
-        width: 202
-        height: 338
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fe4d31e77425dc4ea2787a9deffca90
-      internalID: -1846477861
+      spriteID: 6c45acf571f179a438f8ec989c60a04f
+      internalID: -921411769
       vertices: []
       indices: 
       edges: []
@@ -288,14 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ValinaHD_0: -1127037069
-      ValinaHD_1: 429253238
-      ValinaHD_2: 671355899
-      ValinaHD_3: -717189519
-      ValinaHD_4: -1367792070
-      ValinaHD_5: 2144680341
-      ValinaHD_6: -61807407
-      ValinaHD_7: -1846477861
+      shotgun_0: 1234910327
+      shotgun_1: -1930708051
+      shotgun_2: 1063322301
+      shotgun_3: -921411769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -48,9 +48,10 @@ MonoBehaviour:
   scopeShotgun: {fileID: 3835214867631101846, guid: 0b4bb83a726a1874abf4d25ac1c95e40, type: 3}
   scopeBazooka: {fileID: 3835214867631101846, guid: ab4f440d85839ee49a38dbf9c5df5567, type: 3}
   lazer: {fileID: 111801560095998900, guid: 0ce385eaae182bb4e8896af36bb79d92, type: 3}
+  bomb: {fileID: 669499729490397596, guid: 0d35ddd50d254db4190187993de0b48b, type: 3}
   playerTransform: {fileID: 0}
   shootRate: 1
-  switchRate: 10
+  switchRate: 4
   aimRadius: 2
   shotgunShots: 4
   shotgunSpread: 3
@@ -63,6 +64,7 @@ MonoBehaviour:
   countMiss: 0
   allHand: {fileID: 0}
   hands:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

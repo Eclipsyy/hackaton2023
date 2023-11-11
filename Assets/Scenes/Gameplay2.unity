@@ -862,9 +862,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 504846791}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: shootRate
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: changeHand
       value: 
       objectReference: {fileID: 504846792}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRate
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeBazooka
       value: 
@@ -881,6 +889,10 @@ PrefabInstance:
       propertyPath: bazukaShootAudio
       value: 
       objectReference: {fileID: 2025437377}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: hands.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pistolShootAudio
       value: 
@@ -905,6 +917,10 @@ PrefabInstance:
       propertyPath: hands.Array.data[3]
       value: 
       objectReference: {fileID: 1718915808}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: hands.Array.data[4]
+      value: 
+      objectReference: {fileID: 686671382}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -975,9 +991,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 342791817}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: shootRate
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: changeHand
       value: 
       objectReference: {fileID: 342791818}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRate
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeBazooka
       value: 
@@ -1018,6 +1042,10 @@ PrefabInstance:
       propertyPath: hands.Array.data[3]
       value: 
       objectReference: {fileID: 89220718}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: hands.Array.data[4]
+      value: 
+      objectReference: {fileID: 1610793655}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1332,6 +1360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3886504699290404425, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6364292663058308917, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
       propertyPath: m_Name
       value: AllHands
@@ -1382,6 +1414,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+--- !u!1 &686671382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3886504699290404425, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+  m_PrefabInstance: {fileID: 686671381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &706360378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5789817114829567175, guid: 63f3b092e5041a1458c847f432518745, type: 3}
@@ -2133,6 +2170,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3886504699290404425, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6364292663058308917, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
       propertyPath: m_Name
       value: AllHands1
@@ -2316,6 +2357,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1610793655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3886504699290404425, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+  m_PrefabInstance: {fileID: 1452191670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1624915897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2766,15 +2812,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2437412292298538727, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3490672
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2437412292298538727, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3972125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2437412292298538727, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.12289931
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2437412292298538727, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2804,19 +2850,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3823327072150736259, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4636369304375988354, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_Name
       value: AudioGameplay
-      objectReference: {fileID: 0}
-    - target: {fileID: 6262654447160041305, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
-      propertyPath: m_Volume
-      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
+--- !u!82 &1503610515066152955 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1488338485108496601, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
+  m_PrefabInstance: {fileID: 1503610515066152954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1884913270105246664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3191,6 +3242,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4081846910069601432, guid: 8d24ac10175954f4e83b7293a472b3c7, type: 3}
+      propertyPath: fon
+      value: 
+      objectReference: {fileID: 1503610515066152955}
     - target: {fileID: 4081846910069601432, guid: 8d24ac10175954f4e83b7293a472b3c7, type: 3}
       propertyPath: lifes
       value: 5

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe86bbe382e7c68439cb099383848116
+guid: c39e684326d28ce42ab38069ba231b0f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BaZyka_0
+      name: ValinaHD_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 273
-        height: 235
+        x: 167
+        y: 546
+        width: 207
+        height: 277
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc32f9bde672806469c683731364b427
-      internalID: 1498802136
+      spriteID: ade55c889943a524d89860399621555e
+      internalID: -1127037069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BaZyka_1
+      name: ValinaHD_1
       rect:
         serializedVersion: 2
-        x: 395
-        y: 0
-        width: 273
-        height: 291
+        x: 478
+        y: 557
+        width: 214
+        height: 266
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aced400bc4d8fcc4dbfccc91db4f1ce5
-      internalID: 2115605938
+      spriteID: 0688af9c20a4113488f6a2a8c3c2f1be
+      internalID: 429253238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BaZyka_2
+      name: ValinaHD_2
       rect:
         serializedVersion: 2
-        x: 808
-        y: 0
-        width: 283
-        height: 259
+        x: 812
+        y: 557
+        width: 214
+        height: 392
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02d6fbc2d0d92b469338bd7cf2667cc
-      internalID: -1924903652
+      spriteID: 682a60818501998469ca9e9539a88c34
+      internalID: 671355899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BaZyka_3
+      name: ValinaHD_3
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 0
-        width: 385
-        height: 247
+        x: 1152
+        y: 557
+        width: 194
+        height: 397
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6630857b5fb07fa499bfe653b07b1c0b
-      internalID: 1111467077
+      spriteID: 2e8c9b451e23fac4abcc9e06055de960
+      internalID: -717189519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BaZyka_4
+      name: ValinaHD_4
       rect:
         serializedVersion: 2
-        x: 1559
-        y: 0
-        width: 389
-        height: 268
+        x: 1431
+        y: 470
+        width: 347
+        height: 587
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +221,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 685fd727dc5894a43826eb947efc9711
-      internalID: 1997356339
+      spriteID: c6b4e10d7345c73468191c2ef8cc3b57
+      internalID: -1367792070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ValinaHD_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 34
+        width: 208
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8422360854a7815488e20a4b8105fd24
+      internalID: 2144680341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ValinaHD_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 30
+        width: 206
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feeda52638427045a750ffeeb475247
+      internalID: -61807407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ValinaHD_7
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 33
+        width: 202
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe4d31e77425dc4ea2787a9deffca90
+      internalID: -1846477861
       vertices: []
       indices: 
       edges: []
@@ -225,11 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BaZyka_0: 1498802136
-      BaZyka_1: 2115605938
-      BaZyka_2: -1924903652
-      BaZyka_3: 1111467077
-      BaZyka_4: 1997356339
+      ValinaHD_0: -1127037069
+      ValinaHD_1: 429253238
+      ValinaHD_2: 671355899
+      ValinaHD_3: -717189519
+      ValinaHD_4: -1367792070
+      ValinaHD_5: 2144680341
+      ValinaHD_6: -61807407
+      ValinaHD_7: -1846477861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
