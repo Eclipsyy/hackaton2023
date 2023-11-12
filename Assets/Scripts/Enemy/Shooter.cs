@@ -11,9 +11,12 @@ public class Shooter : MonoBehaviour
     public GameObject scopeBazooka;
     public GameObject lazer;
     public GameObject bomb;
+    public GameObject scopePulemet;
     public Transform playerTransform;
     Vector3 playerPosition;
-    public float shootRate;
+    public float startShootRate;
+    public float pulemetRate;
+    private float shootRate;
     public float switchRate;
     public float aimRadius;
     public int shotgunShots;
@@ -28,6 +31,8 @@ public class Shooter : MonoBehaviour
 
     public Weapon currentWeapon;
 
+    private GameObject createdScopePulemet;
+
     public int countMiss = 0;
     public bool isBomb;
 
@@ -41,6 +46,7 @@ public class Shooter : MonoBehaviour
     public AudioSource pistolShootAudio;
     public AudioSource shotgunShootAudio;
     public AudioSource bazukaShootAudio;
+    public AudioSource pulemetShootAudio;
 
     public Animator changeHand;
 
@@ -49,6 +55,7 @@ public class Shooter : MonoBehaviour
     private void Awake()
     {
         //instance = this;
+        shootRate = startShootRate;
         weightSum = rifleWeight + shotgunWeight + laserWeight;
         SwitchToWeapon(Weapon.Pistol);
         StartCoroutine(SwitchToShotgun());
@@ -111,7 +118,12 @@ public class Shooter : MonoBehaviour
                 case Weapon.Lazer:
                     ShootLaser();
                     break;
+                case Weapon.Pulemet:
+                    shootRate = pulemetRate;
+                    ShootPulumet();
+                    break;
                 case Weapon.Bomb:
+                    shootRate = startShootRate;
                     ShootBomb();
                     StopShooting();
                     break;
@@ -175,10 +187,6 @@ public class Shooter : MonoBehaviour
         GameObject createdScope = GameObject.Instantiate(lazer);
         createdScope.transform.position = new Vector3(ScopePosition.x, 0, 0);
         targetX = createdScope.transform.position.x;
-
-        //Animator handAnim = currentHand.GetComponent<Animator>();
-        //handAnim.SetTrigger("isShoot");
-        //laserShootAudio.PlayOneShot(laserShootAudio.clip);
         countMiss += 1;
     }
 
@@ -190,14 +198,27 @@ public class Shooter : MonoBehaviour
         createdScope.transform.position = new Vector3(ScopePosition.x, 6, 0);
         Scope scope = createdScope.GetComponent<Scope>();
         Invoke("AfterBomb", scope.delay);
-
-        //Invoke("SwitchToPistol", scope.delay);
-        //targetX = createdScope.transform.position.x;
-
-        //Animator handAnim = currentHand.GetComponent<Animator>();
-        //handAnim.SetTrigger("isShoot");
-        //laserShootAudio.PlayOneShot(laserShootAudio.clip);
+        targetX = createdScope.transform.position.x;
         countMiss += 1;
+    }
+
+    private void ShootPulumet()
+    {
+        Vector3 ScopePosition = Aim();
+
+        GameObject createdScope = GameObject.Instantiate(scopePulemet);
+        createdScope.transform.position = ScopePosition;
+        //createdScope.transform.localScale = Vector3.one * shotgunScale;
+        targetX = createdScope.transform.position.x;
+
+        Vector3 targetPosition = new Vector3(playerTransform.position.x, playerTransform.position.y, 0);
+        float smoothSpeed = 0.5f;
+        createdScope.transform.position = Vector3.Lerp(createdScope.transform.position, targetPosition, smoothSpeed * Time.deltaTime);
+
+        Animator handAnim = currentHand.GetComponent<Animator>();
+        handAnim.SetTrigger("isShoot");
+        pulemetShootAudio.PlayOneShot(pulemetShootAudio.clip);
+        //countMiss += 1;
     }
 
     public void AfterBomb()
@@ -246,6 +267,13 @@ public class Shooter : MonoBehaviour
     {
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Lazer);
+        StartCoroutine(SwitchToPulemet());
+    }
+
+    public IEnumerator SwitchToPulemet()
+    {
+        yield return new WaitForSeconds(switchRate);
+        SwitchToWeapon(Weapon.Pulemet);
         StartCoroutine(SwitchToBomb());
     }
 
@@ -258,6 +286,13 @@ public class Shooter : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //if (currentWeapon == Weapon.Pulemet)
+        //{
+            //playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        //    Vector3 targetPosition = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
+        //    float smoothSpeed = 0.5f; // Управляет скоростью передвижения прицела, измените это значение по своему усмотрению
+        //    createdScopePulemet.transform.position = Vector3.Lerp(createdScopePulemet.transform.position, targetPosition, smoothSpeed * Time.deltaTime);
+        //}
         allHand.transform.position = Vector3.Lerp(allHand.transform.position, new Vector3(targetX, allHand.transform.position.y, 0), Time.deltaTime * speedHand);
     }
 }
@@ -268,5 +303,6 @@ public enum Weapon
     Shotgun,
     Bazooka,
     Lazer,
+    Pulemet,
     Bomb
 }

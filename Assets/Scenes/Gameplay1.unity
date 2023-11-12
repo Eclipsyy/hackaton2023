@@ -627,17 +627,37 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: pulemetRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: scopePulemet
+      value: 
+      objectReference: {fileID: 7706456402502022052, guid: 2589c8d7fcde6b64e981c77e7e3e4f85, type: 3}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: cloudCenzAnim
       value: 
       objectReference: {fileID: 1075635851}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: startShootRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: bazukaShootAudio
       value: 
       objectReference: {fileID: 2025437377}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: hands.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pistolShootAudio
       value: 
       objectReference: {fileID: 588879608}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: pulemetShootAudio
+      value: 
+      objectReference: {fileID: 1473664029}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: shotgunShootAudio
       value: 
@@ -660,6 +680,10 @@ PrefabInstance:
       objectReference: {fileID: 1199940790}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: hands.Array.data[4]
+      value: 
+      objectReference: {fileID: 1053329827}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: hands.Array.data[5]
       value: 
       objectReference: {fileID: 1551348937}
     m_RemovedComponents: []
@@ -1118,6 +1142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194ea0b2e874d2b439dcdaccca4c402b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1053329827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2281833066417159252, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+  m_PrefabInstance: {fileID: 6102982715627451162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1075635851 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4829457081389348681, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
@@ -1205,6 +1234,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 462480878911776538, guid: ac11023bf835d0f4a8f0ddd63dbed223, type: 3}
   m_PrefabInstance: {fileID: 7425648259014042800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1473664029 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5671172448967587265, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
+  m_PrefabInstance: {fileID: 1503610515066152954}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551348937 stripped
 GameObject:

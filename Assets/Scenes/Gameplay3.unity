@@ -630,9 +630,17 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: pulemetRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeBazooka
       value: 
       objectReference: {fileID: 111801560095998900, guid: e01fe62b58c66c348a87b91ac0d50811, type: 3}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: scopePulemet
+      value: 
+      objectReference: {fileID: 7706456402502022052, guid: 2589c8d7fcde6b64e981c77e7e3e4f85, type: 3}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeShotgun
       value: 
@@ -642,17 +650,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 926361911}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: startShootRate
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: bazukaShootAudio
       value: 
       objectReference: {fileID: 2025437377}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: hands.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pistolShootAudio
       value: 
       objectReference: {fileID: 588879608}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: pulemetShootAudio
+      value: 
+      objectReference: {fileID: 1503610515066152956}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: shotgunShootAudio
       value: 
@@ -676,11 +692,11 @@ PrefabInstance:
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: hands.Array.data[4]
       value: 
-      objectReference: {fileID: 2089309771}
+      objectReference: {fileID: 422012539}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: hands.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2089309771}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1114,6 +1130,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+--- !u!1 &422012539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2281833066417159252, guid: 4c3dcc6dcd1e8d84d82b5932f7b86fe9, type: 3}
+  m_PrefabInstance: {fileID: 422012538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &433701512 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3614607866328762915, guid: baf0c45daa6f703488e11e99166a3d6c, type: 3}
@@ -2519,6 +2540,11 @@ PrefabInstance:
 --- !u!82 &1503610515066152955 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1488338485108496601, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
+  m_PrefabInstance: {fileID: 1503610515066152954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1503610515066152956 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5671172448967587265, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
   m_PrefabInstance: {fileID: 1503610515066152954}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1884913270105246664
