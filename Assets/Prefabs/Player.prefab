@@ -271,8 +271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalMovementScale: 2
-  verticalMovementScale: 2
-  jumpModifier: 2
+  verticalMovementScale: 1.5
+  jumpModifier: 2.5
   shooters: []
   dog: {fileID: 0}
   animDog: {fileID: 0}
