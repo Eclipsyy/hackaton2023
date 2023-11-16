@@ -64,8 +64,8 @@ MonoBehaviour:
   - {fileID: 7405031570400189997, guid: 98aeb93315ed4cc42820c0c65349964c, type: 3}
   - {fileID: 8485013304571043349, guid: ab447a0f342b6af4b93a22de6b64155f, type: 3}
   spawnProbabilities:
-  - 8
-  - 6
+  - 9
+  - 7
   - 7
   - 6
   - 5

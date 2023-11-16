@@ -875,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pulemetRate
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeBazooka
@@ -941,6 +941,14 @@ PrefabInstance:
       propertyPath: hands.Array.data[5]
       value: 
       objectReference: {fileID: 686671382}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1024,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pulemetRate
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeBazooka
@@ -1090,6 +1098,14 @@ PrefabInstance:
       propertyPath: hands.Array.data[5]
       value: 
       objectReference: {fileID: 1610793655}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2903,10 +2919,6 @@ PrefabInstance:
     - target: {fileID: 2437412292298538727, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823327072150736259, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4636369304375988354, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_Name

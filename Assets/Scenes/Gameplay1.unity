@@ -628,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pulemetRate
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopePulemet
@@ -686,6 +686,14 @@ PrefabInstance:
       propertyPath: hands.Array.data[5]
       value: 
       objectReference: {fileID: 1551348937}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[1]
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

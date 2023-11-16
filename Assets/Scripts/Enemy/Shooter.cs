@@ -17,12 +17,14 @@ public class Shooter : MonoBehaviour
     public float startShootRate;
     public float pulemetRate;
     private float shootRate;
-    public float switchRate;
+    private float switchRate;
     public float aimRadius;
     public int shotgunShots;
     public float shotgunSpread;
     public float shotgunScale;
     public float bazukaScale;
+
+    public float[] switchRateRand = {0, 0};
 
     public float rifleWeight;
     public float shotgunWeight;
@@ -59,6 +61,7 @@ public class Shooter : MonoBehaviour
         weightSum = rifleWeight + shotgunWeight + laserWeight;
         SwitchToWeapon(Weapon.Pistol);
         StartCoroutine(SwitchToShotgun());
+        switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
     }
 
     private void Update()
@@ -243,6 +246,7 @@ public class Shooter : MonoBehaviour
 
     public IEnumerator SwitchToPistol()
     {
+        switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Pistol);
         StartCoroutine(SwitchToShotgun());
@@ -250,6 +254,7 @@ public class Shooter : MonoBehaviour
 
     public IEnumerator SwitchToShotgun()
     {
+        switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Shotgun);
         StartCoroutine(SwitchToBazooka());
@@ -257,14 +262,15 @@ public class Shooter : MonoBehaviour
 
     public IEnumerator SwitchToBazooka()
     {
+        switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Bazooka);
         StartCoroutine(SwitchToLazer());
-        //StartCoroutine(SwitchToPistol());
     }
 
     public IEnumerator SwitchToLazer()
     {
+        switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Lazer);
         StartCoroutine(SwitchToPulemet());
@@ -272,6 +278,7 @@ public class Shooter : MonoBehaviour
 
     public IEnumerator SwitchToPulemet()
     {
+        switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Pulemet);
         StartCoroutine(SwitchToBomb());
@@ -279,6 +286,7 @@ public class Shooter : MonoBehaviour
 
     public IEnumerator SwitchToBomb()
     {
+        //switchRate = Random.Range(switchRateRand[0], switchRateRand[1]);
         yield return new WaitForSeconds(switchRate);
         SwitchToWeapon(Weapon.Bomb);
         //StartCoroutine(SwitchToPistol());

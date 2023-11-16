@@ -631,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: pulemetRate
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
       propertyPath: scopeBazooka
@@ -697,6 +697,14 @@ PrefabInstance:
       propertyPath: hands.Array.data[5]
       value: 
       objectReference: {fileID: 2089309771}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985166484212007634, guid: b14417c6101fc034c8970c09c403af35, type: 3}
+      propertyPath: switchRateRand.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2527,10 +2535,6 @@ PrefabInstance:
     - target: {fileID: 4636369304375988354, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
       propertyPath: m_Name
       value: AudioGameplay
-      objectReference: {fileID: 0}
-    - target: {fileID: 6262654447160041305, guid: a07569f9e2dac0f488a6a43c583cae8b, type: 3}
-      propertyPath: m_Volume
-      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
